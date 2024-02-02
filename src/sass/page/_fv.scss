@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.fv__header {
+  position: absolute;
+  z-index: 800;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+}
+
+.fv__title {
+  font-size: rem(40);
+  font-weight: $regular;
+  font-family: $font-family-la;
+  color: $white;
+  letter-spacing: 0.54em;
+  margin-right: -0.54em;
+  @include mq(md) {
+      font-size: rem(80);
+  }
+}
+
+
+.fv__subtitle {
+  font-size: rem(20);
+  font-family: $font-family-en;
+  font-weight: $regular;
+  color: $white;
+  text-align: center;
+
+}
+
+
+.fv__sp-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mq(md) {
+      display: none;
+  }
+}
+
+.fv__sp-slide-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slider-1 24s linear infinite;
+}
+
+.fv__sp-slide-image:nth-child(1) {
+  background-image: url(../images/common/sp-fv1.jpg);
+  animation-delay: -2s;
+}
+
+.fv__sp-slide-image:nth-child(2) {
+  background-image: url(../images/common/sp-fv2.jpg);
+  animation-delay: 6s;
+}
+
+.fv__sp-slide-image:nth-child(3) {
+  background-image: url(../images/common/sp-fv3.jpg);
+  animation-delay: 14s;
+}
+
+.fv__sp-slide-image:nth-child(4) {
+  background-image: url(../images/common/sp-fv4.jpg);
+  animation-delay: 14s;
+}
+
+.fv__pc-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mq(md) {
+      display: block;
+  }
+}
+
+.fv__pc-slide-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slider-1 24s linear infinite;
+}
+
+.fv__pc-slide-image:nth-child(1) {
+  background-image: url(../images/common/pc-fv1.jpg);
+  animation-delay: -2s;
+}
+
+.fv__pc-slide-image:nth-child(2) {
+  background-image: url(../images/common/pc-fv2.jpg);
+  animation-delay: 6s;
+}
+
+.fv__pc-slide-image:nth-child(3) {
+  background-image: url(../images/common/pc-fv3.jpg);
+  animation-delay: 14s;
+}
+
+.fv__pc-slide-image:nth-child(4) {
+  background-image: url(../images/common/pc-fv4.jpg);
+  animation-delay: 14s;
+}
+
+
+@keyframes slider-1 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  4.16% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  41.66% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.section-header {
+  text-align: center;
+}
+
+.section-header__engtitle{
+  font-size: rem(32);
+  font-family: $font-family-en;
+  font-weight:$regular;
+  @include mq(md) {
+      font-size: rem(40);
+  }
+}
+
+.section-header__engtitle span {
+  color: $green;
+}
+
+.section-header__jatitle{
+  font-size: rem(12);
+  font-family: $font-family-jp;
+  font-weight:$regular;
+  color: $green;
+  margin-top: rem(4);
+}
