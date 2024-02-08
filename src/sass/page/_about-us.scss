@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.about-us {
+  margin-top: rem(84);
+}
+
+.about-us__inner {
+}
+
+.about-us__wrapper {
+  position: relative;
+}
+
+
+.about-us__images {
+  margin-top: rem(24);
+  position: relative;
+  aspect-ratio: 345 / 212;
+  @include mq(md) {
+    aspect-ratio: 1080 / 661;
+  }
+}
+
+.about-us__image1 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;  
+  overflow: hidden;
+  // padding-bottom: rem(18);
+  // padding-right: rem(217);
+  padding-bottom: calc(18 / 375 * 100vw);
+  padding-right: calc(217 / 375 * 100vw);
+  @include mq(md) {
+    padding-bottom: calc(55 / 1440 * 100vw);
+    padding-right: calc(680 / 1440 * 100vw);
+    // padding-bottom: rem(55);
+    // padding-right: rem(680);
+
+  
+  }
+
+  
+}
+
+.about-us__image1 img {
+  height: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    max-width: rem(400);
+
+  }
+}
+
+
+.about-us__image2 {
+  position: absolute;
+  z-index: 0;
+  // padding-top: rem(26);
+  // padding-left: rem(64);
+  padding-top: calc(26 / 375 * 100vw);
+  padding-left: calc(64 / 375 * 100vw);
+  @include mq(md) {
+    padding-top: calc(80 / 1440 * 100vw);
+    padding-left: calc(200 / 1440 * 100vw);
+    // padding-top: rem(80);
+    // padding-left: rem(200);
+  
+      // max-width: rem(880);
+      // right: 0;
+      // bottom: 0;
+  }
+
+}
+
+
+.about-us__content {
+  margin-top: rem(40);
+  @include mq(md) {
+      display: flex;
+      max-width: rem(840);
+      position: absolute;
+      bottom: rem(219);
+      right: rem(40);
+      z-index: 3;
+  }
+}
+
+.about-us__sub-title {
+  font-size: rem(40);
+  line-height: 1;
+  font-family: $font-family-en;
+  color: $green;
+  font-weight: $regular;
+  @include mq(md) {
+      width: 50%;
+      font-size: rem(80);
+      color: $white
+  }
+}
+.about-us__content-body {
+  @include mq(md) {
+      width: 50%;
+      margin-left: rem(20);
+  }
+}
+.about-us__text {
+  margin-top: rem(16);
+  font-size: rem(16);
+  @include mq(md) {
+      margin-top: rem(0);
+      color: $white
+  }
+}
+
+.about-us__button {
+  margin-top: rem(50);
+  text-align: center;
+  @include mq(md) {
+      margin-top: rem(40);
+  }
+}
+
+.button {
+}
+
+.slide {
+}
+
+.button-arrow {
+}
+

@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.price {
+  background-color: $lightgreen;
+  margin-top: rem(84);
+  padding-top: rem(80);
+  padding-bottom: rem(84);
+  @include mq(md) {
+    margin-top: rem(144);
+    padding-top: rem(100);
+    padding-bottom: rem(104);
+  
+  }
+}
+
+.price__inner.inner {
+  max-width: rem(580);
+  @include mq(md) {
+      max-width: $inner;
+  }
+}
+
+.price__wrapper {
+  margin-top: rem(24);
+  @include mq(md) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+  }
+}
+
+.price__image-sp {
+  aspect-ratio: 345 / 227;
+  overflow: hidden;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.price__image-pc {
+  display: none;
+  @include mq(md) {
+    display: block;
+    aspect-ratio: 492 / 746;
+    overflow: hidden;
+    max-width: rem(492);
+  
+  }
+}
+
+.price__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;  
+}
+
+.price__content {
+  margin-top: rem(40);
+  @include mq(md) {
+      margin-top: rem(0);
+      max-width: rem(492);
+      width: 100%;
+  }
+}
+
+.price__subtitle {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(4);
+}
+
+.price__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__course {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  font-weight: $regular;
+}
+
+.price__fee {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  font-weight: $regular;
+}
+
+.price__item + .price__item {
+  margin-top: rem(40);
+}
+
+.price__button {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}
+
+

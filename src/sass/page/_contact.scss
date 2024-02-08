@@ -1,0 +1,124 @@
+@use "global" as *;
+
+.contact {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
+
+.contact__inner.inner {
+  max-width: rem(580);
+  @include mq(md) {
+    max-width: $inner;
+  }
+}
+
+.contact__content {
+  @include mq(md) {
+    display: flex;
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.25) ;
+  }
+
+}
+
+.contact__access {
+  padding: 0 rem(25);
+  @include mq(md) {
+    border-right: 1px solid $green;
+    padding-right: rem(81);
+    padding-left: rem(51);
+  }
+}
+
+.contact__company {
+  text-align: center;
+  border-bottom: 1px solid $green;
+  // filter: drop-shadow(0px 3px 1px rgba(0,0,0,0.25))
+
+}
+
+.contact__company img {
+  width: rem(174);
+  display: inline-block;
+}
+
+.contact__address {
+  margin-top: rem(16);
+  @include mq(md) {
+      display: flex;
+      margin-top: rem(24);
+  }
+}
+
+.contact__text p {
+  text-align: center;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  // text-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+}
+
+.contact__text-item+ .contact__text-item {
+  margin-top: rem(4);
+}
+
+.contact__map {
+  margin-top: rem(16);
+  // box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+  @include mq(md) {
+      margin-top: rem(0);
+      margin-left: rem(21);
+      max-width: rem(273);
+      max-height: rem(148);
+  }
+}
+
+.contact__map iframe {
+  aspect-ratio: 295 / 160;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    // aspect-ratio: 273 / 148;
+    // max-width: rem(273);
+    // max-height: rem(148);
+
+  }
+
+}
+
+.contact__info {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(20);
+    margin-left: rem(81);
+  }
+}
+
+.contact__info-header .section-header__engtitle {
+  font-size: rem(80);
+  line-height: 1;
+  // text-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+}
+
+.contact__info-header .section-header__jatitle {
+  margin-top: rem(-10);
+  // text-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+}
+
+.contact__info-text {
+  font-size: rem(14);line-height: calc(18 / 14);
+  text-align: center;
+  color: $green;
+  margin-top: rem(8);
+  // text-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+
+}
+
+.contact__info-button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+

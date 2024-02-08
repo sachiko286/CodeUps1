@@ -1,0 +1,222 @@
+@use "global" as *;
+
+
+.campaign {
+margin-top: rem(40);
+@include mq(md) {
+    margin-top: rem(120);
+}
+}
+
+.campaign__swiper{
+  margin-top: rem(24);
+  @include mq(md) {
+      margin-top: rem(40);
+  }
+}
+.campaign__card {
+  max-width: rem(280);
+  width: 100%;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: rem(10);
+  @include mq(md) {
+      max-width: rem(333);
+  }
+
+}
+
+.campaign__card-img img {
+  aspect-ratio: 280 / 188;
+  object-fit: cover;
+  width: 100%;
+  @include mq(md) {
+    aspect-ratio: 333 / 223;
+  
+  }
+}
+
+.campaign__card-body {
+  padding: rem(16) rem(16) rem(24);
+  @include mq(md) {
+    padding: rem(24) rem(16) rem(40);
+
+  }
+}
+
+.campaign__card-category {
+  font-size: rem(12);
+  font-family: $font-family-jp;
+  color: $green;
+  border: 1px solid $green;
+  padding: rem(4) rem(12);
+  display: inline-block;
+}
+
+.campaign__card-title {
+  margin-top: rem(4);
+  padding-bottom: rem(8);
+  font-size: rem(16);
+  font-family: $font-family-jp;
+  font-weight: $medium;
+  border-bottom: 1px solid $green;
+}
+
+.campaign__card-text {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  font-family: $font-family-jp;
+  text-align: center;
+  @include mq(md) {
+      font-size: rem(16);
+  }
+}
+
+.campaign__card-price {
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  margin-top: rem(8);
+
+}
+
+.campaign__card-price-original {
+  color: #C94800;
+  text-decoration: line-through 3px;
+  font-size: rem(20);
+  @include mq(md) {
+      font-size: rem(24);
+  }
+  
+}
+.campaign__card-price-original span {
+  color: black;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include mq(md) {
+      font-size: rem(24);
+  }
+  }
+
+
+.campaign__card-price-discount {
+  font-size: rem(32);
+  font-weight: $bold;
+  color: $green;
+  margin-left: rem(12);
+  font-family: $font-family-la;
+  line-height: 1.2;;
+  @include mq(md) {
+      font-size: rem(40);
+  }
+}
+
+.campaign__button {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}
+
+.swiper-container {
+  position: relative;
+}
+.swiper {
+  position: relative;
+}
+.swiper-wrapper {
+  position: relative;
+}
+
+.swiper-button-prev {
+  display: none;
+  @include mq(md) {
+      display: block;
+  };
+  //位置はここで指定
+  // top: 50%;
+  // transform: translateY(-50%);
+  &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: auto;
+      aspect-ratio: 1;
+      border-right: 2px solid red;
+      border-bottom: 2px solid red;
+      //配置, 回転
+      transform: rotate(135deg);
+  }
+}
+
+
+
+.swiper-button-next {
+  //位置はここで指定
+    top:-50px;
+    right: 180px;
+  // transform: translateY(-50%);
+    // display: none;
+    @include mq(md) {
+        display: block;
+    }
+}
+.swiper-button-next::after {
+      content: '';
+      // position: absolute;
+      // border: 1px solid $green;
+      // width: 80px;
+      // height: 80px;
+      // border-radius: 50%;
+      // width: 20px;
+      // height: auto;
+      // aspect-ratio: 1;
+      // border-right: 1px solid $green;
+      // border-bottom: 1px solid $green;
+      // //配置, 回転
+      // transform: rotate(-45deg);
+  
+}
+
+
+.swiper-button-arrow-n {
+  display: none;
+  @include mq(md) {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    width: rem(40);
+    height: rem(1);
+    background: currentColor;
+    margin-left: rem(8);
+  
+  }
+
+}
+
+.swiper-button-arrow-n::before {
+  content: '';
+  width: rem(6);
+  border: 1px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 50%;
+  right: rem(-0.5);
+}
+
+.swiper-button-arrow-n::after {
+  content: '';
+  position: absolute;
+  border: 1px solid $green;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: -38px;
+  left: -25px;
+}
+

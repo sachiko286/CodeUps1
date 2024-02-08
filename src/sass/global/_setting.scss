@@ -2,12 +2,12 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1080px;
+$inner: 1130px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: 15px;
 
 ////////////////////
 // フォント設定
@@ -24,6 +24,7 @@ $font-family-la: 'Lato', sans-serif;
 
 body {
   font-family: $font-family-jp;
+  // color: $darkgreen;
 }
 
 // フォントウェイト
@@ -42,3 +43,7 @@ $white: #fff;
 $darkgreen: #0D2936;
 $green: #408F95;
 $lightgreen: #DDF0F1;
+
+body {
+  color: $darkgreen;
+}

@@ -62,7 +62,8 @@
 }
 
 .header__nav-item a {
-  padding: 0 rem(20);
+  // padding: 0 rem(20);
+  margin: 0 rem(20);
   height: inherit;
   display: flex;
   justify-content: center;
@@ -75,10 +76,12 @@
 }
 
 .header__nav-item:first-child a {
-  padding-left: 0;
+  // padding-left: 0;
+  margin-left: rem(0);
 }
 .header__nav-item:last-child a {
-  padding-right: 0;
+  // padding-right: 0;
+  margin-right: rem(0);
 }
 
 .header__nav-item span {
@@ -184,6 +187,42 @@
   font-size: rem(10);
   font-family: $font-family-jp;
   font-weight: $regular;
-
-
 }
+
+/*==================================================
+5-3-1 中心から外に線が伸びる（下部）
+===================================*/
+
+.header__nav-item a{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+}
+
+.header__nav-item a:hover{
+// color:#0481A2;
+}
+
+.header__nav-item a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(15);
+  // left: 10%;
+  /*線の形状*/
+  width: 100%;
+  height: rem(2);
+  background:#fff;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.header__nav-item a:hover::after  {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+
+

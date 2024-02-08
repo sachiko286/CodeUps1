@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.blog {
+  padding-top: rem(80);
+  position: relative;
+  @include mq(md) {
+      padding-top: rem(100);
+  }
+  // @include mq(md) {
+  //   padding-top: rem(100);
+  //   background-image: url(../images/common/blog-bg.jpg);
+  //   background-repeat:no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   max-height: rem(500);
+  // }
+}
+
+.blog__bg {
+  @include mq(md) {
+    padding-top: rem(100);
+    background-image: url(../images/common/blog-bg.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: rem(500);
+    width: 100%;
+    z-index: -1;
+    top: 0;
+  }
+}
+
+.blog__inner.inner{
+  padding: 0 rem(21);
+  max-width: rem(580);
+  @include mq(md) {
+      max-width: $inner;
+      padding: 0 rem(25);
+  }
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}
+
+.blog__title.section-header__engtitle {
+  @include mq(md) {
+    color: $white;    
+  }
+}
+.blog__title.section-header__engtitle span {
+  @include mq(md) {
+    color: $lightgreen; 
+  }
+}
+
+.blog__title.section-header__jatitle {
+  @include mq(md) {
+    color: $white;
+  }
+  
+}
