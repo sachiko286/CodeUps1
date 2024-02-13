@@ -43,6 +43,8 @@
 .blog__button {
   margin-top: rem(40);
   text-align: center;
+  position: relative;
+  right: 2px;
   @include mq(md) {
       margin-top: rem(80);
   }
@@ -63,5 +65,27 @@
   @include mq(md) {
     color: $white;
   }
-  
 }
+
+.blog__block-img {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(1290);
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    padding-left: rem(25);
+    z-index: 5;
+    max-height: rem(201);
+    top: rem(24);
+  
+  }
+}
+
+.blog__block-img img {
+  max-width: rem(437);
+  display: inline-block;
+}
+

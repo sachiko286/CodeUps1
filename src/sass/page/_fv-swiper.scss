@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.fv {
+  position: relative;
+  z-index: 800;
+}
+
+.fv__title-wrap {
+  position: absolute;
+  z-index: 801;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+}
+
+.fv__main-title {
+  font-size: rem(40);
+  font-weight: $regular;
+  font-family: $font-family-la;
+  letter-spacing: 0.54em;
+  margin-right: -0.54em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  @include mq(md) {
+      font-size: rem(80);
+  }
+}
+
+
+.fv__sub-title {
+  font-size: rem(20);
+  font-family: $font-family-en;
+  font-weight: $regular;
+  
+
+}
+
+
+.fv__sp-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mq(md) {
+      display: none;
+  }
+}
+
+.fv__pc-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include mq(md) {
+      display: block;
+  }
+}
+
+
+.fv__sp-swiper,
+.fv__sp-swiper .swiper-img,
+.fv__sp-swiper .swiper-img img,
+.fv__pc-swiper,
+.fv__pc-swiper .swiper-img,
+.fv__pc-swiper .swiper-img img {
+    height: inherit;
+    min-height: inherit;
+}
+
+.fv__sp-swiper .swiper-img img,
+.fv__pc-swiper .swiper-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.fv__sp-swiper .swiper-slide.swiper-slide-active .swiper-img,
+.fv__sp-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.fv__sp-swiper .swiper-slide.swiper-slide-prev .swiper-img,
+.fv__pc-swiper .swiper-slide.swiper-slide-active .swiper-img,
+.fv__pc-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.fv__pc-swiper .swiper-slide.swiper-slide-prev .swiper-img {
+    animation: scale 8s linear 0s normal both;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}

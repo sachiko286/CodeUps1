@@ -30,7 +30,9 @@
     rel="stylesheet">
 
   <!-- JavaScript -->
+
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./assets/js/jquery.inview.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
@@ -111,11 +113,69 @@
 
   <main>
 
-    <div class="fv">
+    <section class="fv">
       <div class="fv__inner">
-        <div class="fv__header">
-          <h2 class="fv__title">DIVING</h2>
-          <p class="fv__subtitle">into the ocean</p>
+        <div class="fv__title-wrap">
+          <h2 class="fv__main-title">diving</h2>
+          <p class="fv__sub-title">into the ocean</p>
+        </div>
+        <div class="fv__sp-swiper swiper js-fv-swiper">
+          <div class="fv__sp-slide-wrapper swiper-wrapper">
+            <div class="fv__sp-slide swiper-slide">
+              <div class="fv__sp-slide-image swiper-img">
+                <img src="./assets/images/common/sp-fv1.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__sp-slide swiper-slide">
+              <div class="fv__sp-slide-image swiper-img">
+                <img src="./assets/images/common/sp-fv2.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__sp-slide swiper-slide">
+              <div class="fv__sp-slide-image swiper-img">
+                <img src="./assets/images/common/sp-fv3.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__sp-slide swiper-slide">
+              <div class="fv__sp-slide-image swiper-img">
+                <img src="./assets/images/common/sp-fv4.jpg" alt="省略">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fv__pc-swiper swiper js-fv-swiper">
+          <div class="fv__pc-slide-wrapper swiper-wrapper">
+            <div class="fv__pc-slide swiper-slide">
+              <div class="fv__pc-slide-image swiper-img">
+                <img src="./assets/images/common/pc-fv1.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__pc-slide swiper-slide">
+              <div class="fv__pc-slide-image swiper-img">
+                <img src="./assets/images/common/pc-fv2.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__pc-slide swiper-slide">
+              <div class="fv__pc-slide-image swiper-img">
+                <img src="./assets/images/common/pc-fv3.jpg" alt="省略">
+              </div>
+            </div>
+            <div class="fv__pc-slide swiper-slide">
+              <div class="fv__pc-slide-image swiper-img">
+                <img src="./assets/images/common/pc-fv4.jpg" alt="省略">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <div class="fv">
+      <div class="fv__inner">
+        <div class="fv__title-wrap">
+          <h2 class="fv__main-title">DIVING</h2>
+          <p class="fv__sub-title">into the ocean</p>
         </div>
         <div class="fv__sp-slide">
           <div class="fv__sp-slide-image"></div>
@@ -130,7 +190,7 @@
           <div class="fv__pc-slide-image"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <section class="campaign">
       <div class="campaign__inner">
@@ -139,6 +199,10 @@
           <p class="section-header__jatitle">キャンペーン</p>
         </div>
         <div class="campaign__swiper swiper-container">
+          <div class="swiper-button-wrapper">
+            <div class="swiper-button-prev"><span class="swiper-button-arrow-p"></span></div>
+            <div class="swiper-button-next"><span class="swiper-button-arrow-n"></span></div>
+          </div>
           <div class="swiper js-campaign-swiper">
             <div class="swiper-wrapper">
               <div class="campaign__card swiper-slide">
@@ -219,8 +283,6 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-prev"><span class="swiper-button-arrow-p"></span></div>
-          <div class="swiper-button-next"><span class="swiper-button-arrow-n"></span></div>
         </div>
         <div class="campaign__button">
           <a href="" class="button slide">View more<span class="button-arrow"></span></a>
@@ -229,6 +291,10 @@
     </section>
 
     <section class="about-us">
+      <div class="about-us__block-img">
+        <img src="./assets/images/common/about-picture1.png" alt="サンゴ">
+      </div>
+
       <div class="about-us__inner inner">
         <div class="about-us__header section-header">
           <h2 class="section-header__engtitle"><span>A</span>bout us</h2>
@@ -266,7 +332,7 @@
           <p class="section-header__jatitle">ダイビング情報</p>
         </div>
         <div class="information__wrapper">
-          <div class="information__image">
+          <div class="information__image colorbox">
             <img src="./assets/images/common/info.jpg" alt="サカナの写真">
           </div>
           <div class="information__content">
@@ -284,6 +350,9 @@
 
     <section class="blog">
       <div class="blog__bg"></div>
+      <div class="blog__block-img">
+        <img src="./assets/images/common/blog-picture2.png" alt="サカナの絵">
+      </div>
       <div class="blog__inner inner">
         <div class="blog__header section-header">
           <h2 class="blog__title section-header__engtitle"><span>B</span>log</h2>
@@ -337,6 +406,12 @@
     </section>
 
     <section class="voice">
+      <div class="voice__block-img-fish">
+        <img src="./assets/images/common/voice-picture3.png" alt="サカナの絵">
+      </div>
+      <div class="voice__block-img-seahorse">
+        <img src="./assets/images/common/voice-picture4.png" alt="タツノオトシゴの絵">
+      </div>
       <div class="voice__inner inner">
         <div class="voice__header section-header">
           <h2 class="section-header__engtitle"><span>V</span>oice</h2>
@@ -353,7 +428,7 @@
                   </div>
                   <h3 class="voice__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
-                <div class="voice-list__img">
+                <div class="voice-list__img colorbox">
                   <img src="./assets/images/common/voice1.jpg" alt="女性の写真">
                 </div>
               </div>
@@ -373,11 +448,11 @@
                   </div>
                   <h3 class="voice__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
-                <div class="voice-list__img">
+                <div class="voice-list__img colorbox">
                   <img src="./assets/images/common/voice2.jpg" alt="女性の写真">
                 </div>
               </div>
-              <p class="voice__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              <p class="voice-list__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。。
               </p>
@@ -392,16 +467,19 @@
     </section>
 
     <section class="price">
+      <div class="price__block-img">
+        <img src="./assets/images/common/price-picture5.png" alt="サカナの絵">
+      </div>
       <div class="price__inner inner">
         <div class="price__header section-header">
           <h2 class="section-header__engtitle"><span>P</span>rice</h2>
-          <p class="section-header__jatitle">ダイビング情報</p>
+          <p class="section-header__jatitle">料金一覧</p>
         </div>
         <div class="price__wrapper">
-          <div class="price__image-sp">
+          <div class="price__image-sp  colorbox">
             <img src="./assets/images/common/price-sp.jpg" alt="サカナの写真">
           </div>
-          <div class="price__image-pc">
+          <div class="price__image-pc  colorbox">
             <img src="./assets/images/common/price-pc.jpg" alt="サカナの写真">
           </div>
           <div class="price__content">
@@ -478,6 +556,9 @@
     </section>
 
     <section class="contact">
+      <div class="contact__block-img">
+        <img src="./assets/images/common/contact-picture6.png" alt="サカナの絵">
+      </div>
       <div class="contact__inner inner">
         <div class="contact__content">
           <div class="contact__access">
@@ -590,6 +671,8 @@
       </div>
     </div>
   </footer>
+  <div class="page-top js-page-top"><div class="page-top__yazirusi"></div></div>
+<!-- 
 
   <div class="yohaku"></div>
 
@@ -604,11 +687,7 @@
   <div class="yohaku"></div>
   <a href="" class="button slide">Contact us<span class="button-arrow"></span></a>
   <div class="yohaku"></div>
-  
-
-
-
-
+-->
 </body>
 
 

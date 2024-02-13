@@ -5,6 +5,9 @@
   margin-top: rem(104);
 }
 
+.footer__inner.inner {
+  padding-right: rem(0);
+}
 .footer__inner {
   padding-top: rem(48);
   padding-bottom: rem(58);
@@ -41,14 +44,17 @@
 
 .footer__sns {
   display: flex;
+  align-items: center;
   margin-top: rem(16);
-  margin-left: rem(40);
   @include mq(md) {
       margin-top: rem(40);
+      margin-left: rem(40);
   }
 }
 
-.footer__sns a {
+
+
+.footer__sns-facebook {
   width: rem(24);
   height: rem(24);
   @include mq(md) {
@@ -57,18 +63,14 @@
   }
 }
 
-
-.footer__sns-facebook {
-}
-
 .footer__sns-insta {
-  margin-left: rem(16);
+  margin-left: rem(18);
+  width: rem(19);
+  height: rem(19);
+  position: relative;
 }
 
 .footer__nav {
-}
-
-.footer__content {
   color: $white;
   margin-top: rem(40);
   column-count: 2;
@@ -77,6 +79,10 @@
     column-count: 4;
     margin-top: rem(24);
   }
+}
+
+.footer__content {
+
 }
 
 
@@ -93,20 +99,18 @@
   display: inline-block;
   width: rem(18);
   margin-right: rem(4);
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 .footer__list-category {
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(18 / 16);
-  // display: flex;
-  // display: block;
 }
 
 .footer__list-item {
   margin-top: rem(24);
-  margin-left: rem(24);
+  margin-left: rem(22);
 }
 
 .footer__list-items {
@@ -114,11 +118,6 @@
   line-height: calc(18 / 16);
 }
 
-// .footer__list-items a {
-//   display: block;
-//   height: 100%;
-//   width: 100%
-// }
 
 .footer__list-items + .footer__list-items {
   margin-top: rem(24);
@@ -127,10 +126,9 @@
 
 .footer__copyright {
   font-size: rem(12);
-  text-align: center;
   color: $white;
   font-family: $font-family-en;
-  margin-top: rem(40);
+  margin-top: rem(23);
   @include mq(md) {
     font-size: rem(16);
     margin-top: rem(80);

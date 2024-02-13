@@ -4,7 +4,8 @@
   background-color: $lightgreen;
   margin-top: rem(84);
   padding-top: rem(80);
-  padding-bottom: rem(84);
+  padding-bottom: rem(83);
+  position: relative;
   @include mq(md) {
     margin-top: rem(144);
     padding-top: rem(100);
@@ -21,7 +22,7 @@
 }
 
 .price__wrapper {
-  margin-top: rem(24);
+  margin-top: rem(27);
   @include mq(md) {
       display: flex;
       flex-direction: row-reverse;
@@ -92,15 +93,37 @@
 }
 
 .price__item + .price__item {
-  margin-top: rem(40);
+  margin-top: rem(39);
 }
 
 .price__button {
-  margin-top: rem(40);
+  margin-top: rem(39);
   text-align: center;
+  position: relative;
+  right: rem(2);
   @include mq(md) {
       margin-top: rem(80);
   }
 }
 
+.price__block-img {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(1290);
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    padding-left: rem(25);
+    z-index: 5;
+    max-height: rem(201);
+    bottom: rem(60);
+  }
+}
+
+.price__block-img img {
+  max-width: rem(437);
+  display: inline-block;
+}
 

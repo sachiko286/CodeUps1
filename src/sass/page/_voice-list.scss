@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .voice__list {
-  margin-top: rem(24);
+  margin-top: rem(43);
   @include mq(md) {
     margin-top: rem(30);
   }
@@ -16,7 +16,7 @@
   }
 }
 .voice-list__item {
-  padding: rem(15) rem(16) rem(24);
+  padding: rem(15) rem(16) rem(23);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   @include mq(md) {
     padding: rem(24);
@@ -51,7 +51,7 @@
   font-size: rem(12);
   color: $green;
   border: 1px solid $green;
-  padding: rem(4) rem(12);
+  padding: rem(3) rem(11);
   display: inline-block;
   line-height: calc(22 / 12);
 }
@@ -62,6 +62,7 @@
   font-size: rem(16);
   font-family: $font-family-jp;
   font-weight: $medium;
+  line-height: 1.4;
   @include mq(md) {
     font-size: rem(24);
   }

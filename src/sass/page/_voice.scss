@@ -2,6 +2,7 @@
 
 .voice {
   margin-top: rem(84);
+  position: relative;
   @include mq(md) {
     margin-top: rem(140);
   }
@@ -17,9 +18,52 @@
 .voice__button {
   margin-top: rem(40);
   text-align: center;
+  position: relative;
+  right: rem(2);
   @include mq(md) {
     margin-top: rem(89);
   }
 }
 
+.voice__block-img-fish {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(1290);
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    padding-left: rem(25);
+    z-index: 5;
+    max-height: rem(138);
+    top: rem(-120);
+  }
+}
 
+.voice__block-img-fish img {
+  max-width: rem(301);
+  display: inline-block;
+}
+
+.voice__block-img-seahorse {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(1130);
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: rem(-71);
+    text-align: right;
+    padding-right: rem(25);
+    z-index: 5;
+    max-height: rem(162);
+  }
+}
+
+.voice__block-img-seahorse img {
+  max-width: rem(71);
+  display: inline-block;
+}
