@@ -5,7 +5,7 @@
   margin-top: rem(40);
 
   @include mq(md) {
-    margin-top: rem(120);
+    margin-top: rem(115);
   }
 }
 
@@ -13,7 +13,7 @@
   margin-top: rem(6);
 
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(18);
   }
 }
 
@@ -44,7 +44,7 @@
   padding: rem(16) rem(16) rem(21);
 
   @include mq(md) {
-    padding: rem(24) rem(16) rem(40);
+    padding: rem(24) rem(16) rem(35);
 
   }
 }
@@ -56,6 +56,9 @@
   border: 1px solid $green;
   padding: rem(5) rem(10);
   display: inline-block;
+  @include mq(md) {
+      padding: rem(7) rem(15);
+  }
 }
 
 .campaign__card-title {
@@ -73,9 +76,9 @@
   line-height: calc(24 / 14);
   font-family: $font-family-jp;
   text-align: center;
-
   @include mq(md) {
     font-size: rem(16);
+    margin-top: rem(13);
   }
 }
 
@@ -106,6 +109,7 @@
 
   @include mq(md) {
     font-size: rem(24);
+    
   }
 }
 
@@ -117,10 +121,9 @@
   margin-left: rem(19);
   font-family: $font-family-la;
   line-height: 1.2;
-  ;
-
   @include mq(md) {
     font-size: rem(40);
+    margin-left: rem(26);
   }
 }
 
@@ -131,7 +134,7 @@
   right: rem(2);
 
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }
 
@@ -199,7 +202,7 @@
     height: rem(1);
     background: currentColor;
     // margin-left: rem(4);
-    right: rem(120);
+    right: rem(110);
   }
 }
 
@@ -265,7 +268,7 @@
     height: rem(1);
     background: currentColor;
     // margin-left: rem(8);
-    right: rem(20);
+    right: rem(10);
   }
 }
 

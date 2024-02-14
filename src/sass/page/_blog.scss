@@ -4,7 +4,7 @@
   padding-top: rem(80);
   position: relative;
   @include mq(md) {
-      padding-top: rem(100);
+      padding-top: rem(95);
   }
   // @include mq(md) {
   //   padding-top: rem(100);
@@ -47,6 +47,7 @@
   right: 2px;
   @include mq(md) {
       margin-top: rem(80);
+      right: rem(4);
   }
 }
 

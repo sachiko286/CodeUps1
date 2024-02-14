@@ -73,6 +73,9 @@
   font-family: $font-family-en;
   line-height: 1;
   color: $white;
+  top: rem(-2);
+  right: rem(2);
+
 }
 
 .header__nav-item:first-child a {
@@ -85,7 +88,7 @@
 }
 
 .header__nav-item span {
-  margin-top: rem(4);
+  margin-top: rem(7);
   display: block;
   font-size: rem(10);
   font-family: $font-family-jp;
