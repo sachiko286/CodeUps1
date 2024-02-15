@@ -38,6 +38,9 @@
   text-align: center;
   border-bottom: 1px solid $green;
   // filter: drop-shadow(0px 3px 1px rgba(0,0,0,0.25))
+  @include mq(md) {
+      line-height: 1.6;
+  }
 
 }
 
@@ -120,6 +123,9 @@
   color: $green;
   margin-top: rem(8);
   // text-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25) ;
+  @include mq(md) {
+      margin-left: rem(4);
+  }
 
 }
 
@@ -128,6 +134,9 @@
   text-align: center;
   position: relative;
   right: rem(2);
+  @include mq(md) {
+      right: rem(0);
+  }
 }
 
 
@@ -141,7 +150,7 @@
   position: absolute;
   top: rem(-26);
   text-align: center;
-  z-index: 5;
+  z-index: 1;
   max-height: rem(50);
   padding-left: rem(236);
   @include mq(md) {

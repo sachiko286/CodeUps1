@@ -4,7 +4,7 @@
   margin-top: rem(84);
   position: relative;
   @include mq(md) {
-      margin-top: rem(136);
+      margin-top: rem(138);
   }
 }
 
@@ -166,7 +166,7 @@
 }
 
 .about-us__button {
-  margin-top: rem(50);
+  margin-top: rem(49);
   text-align: center;
   position: relative;
   right: rem(2);
@@ -188,7 +188,7 @@
     bottom: rem(-90);
     text-align: right;
     padding-right: rem(25);
-    z-index: 5;
+    z-index: 1;
     max-height: rem(181);
   
   }

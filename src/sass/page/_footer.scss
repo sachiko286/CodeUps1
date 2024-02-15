@@ -53,7 +53,7 @@
   align-items: center;
   margin-top: rem(16);
   @include mq(md) {
-      margin-top: rem(34);
+      margin-top: rem(33);
       margin-left: rem(40);
   }
 }
@@ -87,7 +87,7 @@
   column-gap: rem(9);
   @include mq(md) {
     column-count: 4;
-    margin-top: rem(24);
+    margin-top: rem(22);
     column-gap: rem(20);
   }
 }

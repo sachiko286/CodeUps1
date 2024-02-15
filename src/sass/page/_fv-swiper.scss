@@ -13,6 +13,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: $white;
+  line-height: 1.7;
 }
 
 .fv__main-title {
@@ -33,6 +34,10 @@
   font-size: rem(20);
   font-family: $font-family-en;
   font-weight: $regular;
+  @include mq(md) {
+      position: relative;
+      top: rem(4);
+  }
   
 
 }

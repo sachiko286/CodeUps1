@@ -2,11 +2,11 @@
 
 .information {
   background-color: $lightgreen;
-  margin-top: rem(73);
+  margin-top: rem(74);
   padding-top: rem(80);
   padding-bottom: rem(84);
   @include mq(md) {
-      margin-top: rem(164);
+      margin-top: rem(163);
       padding-top: rem(95);
       padding-bottom: rem(76);
     }
@@ -24,7 +24,7 @@
   @include mq(md) {
       display: flex;
       justify-content: center;
-      margin-top: rem(38);
+      margin-top: rem(40);
   }
 }
 
@@ -72,6 +72,7 @@
   font-weight: $regular;
   @include mq(md) {
       padding-right: rem(4);
+      margin-top: rem(6);
   }
 
 }

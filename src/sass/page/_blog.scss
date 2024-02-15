@@ -46,7 +46,7 @@
   position: relative;
   right: 2px;
   @include mq(md) {
-      margin-top: rem(80);
+      margin-top: rem(82);
       right: rem(4);
   }
 }
@@ -78,7 +78,7 @@
     transform: translate(-50%);
     position: absolute;
     padding-left: rem(25);
-    z-index: 5;
+    z-index: 1;
     max-height: rem(201);
     top: rem(24);
   
