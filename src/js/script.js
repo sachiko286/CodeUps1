@@ -38,28 +38,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
     // Fvスライダー
-    // const mv_swiper = new Swiper(".js-fv-swiper", {
-    //     loop: true,
-    //     speed: 2000,
-    //     effect: "fade",
-    //     fadeEffect: {
-    //         crossFade: true,
-    //     },
-    //     autoplay: {
-    //         delay: 4000,
-    //         disableOnInteraction: false,
-    //     },
-    // });
+    const mv_swiper = new Swiper(".js-fv-swiper", {
+        loop: true,
+        speed: 2000,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
 
 
     // キャンペーンスライダー（swiper）
     const mySwiper = new Swiper('.js-campaign-swiper', { //名前を変える
         loop: true,
         loopAdditionalSlides: 1,
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
         speed: 2000,          //追記
         slidesPerView: "auto",
         spaceBetween: 24, // スライド間の余白（px）
