@@ -11,7 +11,7 @@
 .voice__inner.inner {
   max-width: rem(580);
   @include mq(md) {
-    max-width: $inner;
+    max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
 
@@ -66,4 +66,11 @@
 .voice__block-img-seahorse img {
   max-width: rem(71);
   display: inline-block;
+}
+
+.voice__list {
+  margin-top: rem(43);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }

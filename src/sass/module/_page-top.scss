@@ -19,9 +19,10 @@
     width: rem(80);
     height: rem(80);
     margin-bottom: rem(4);
-    
   }
-
+}
+.page-top:hover {
+  background-color:  rgba(0, 0, 0, 0.1);
 }
 
 .page-top__yazirusi {
@@ -50,6 +51,6 @@
 
 }
 
-body {
-  position: relative;
-}
+// body {
+//   position: relative;
+// }

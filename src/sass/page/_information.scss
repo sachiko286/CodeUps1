@@ -15,7 +15,7 @@
 .information__inner.inner {
   max-width: rem(580);
   @include mq(md) {
-      max-width: $inner;
+      max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
 
