@@ -53,18 +53,18 @@
   }
 }
 
-.blog__title.section-header__engtitle {
+.blog__engtitle.section-header__engtitle {
   @include mq(md) {
     color: $white;    
   }
 }
-.blog__title.section-header__engtitle span {
+.blog__engtitle.section-header__engtitle span {
   @include mq(md) {
     color: $lightgreen; 
   }
 }
 
-.blog__title.section-header__jatitle {
+.blog__jatitle.section-header__jatitle {
   @include mq(md) {
     color: $white;
   }
