@@ -12,11 +12,8 @@
     }
 }
 
-.information__inner.inner {
+.information__inner {
   max-width: rem(580);
-  @include mq(md) {
-      max-width: $inner + strip-unit($padding-pc) * 2;
-  }
 }
 
 .information__wrapper {

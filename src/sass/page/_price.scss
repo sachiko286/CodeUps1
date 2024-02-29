@@ -14,11 +14,8 @@
   }
 }
 
-.price__inner.inner {
+.price__inner {
   max-width: rem(580);
-  @include mq(md) {
-      max-width: $inner + strip-unit($padding-pc) * 2;
-  }
 }
 
 .price__wrapper {
@@ -133,7 +130,6 @@
     transform: translate(-50%);
     position: absolute;
     padding-left: rem(25);
-    z-index: 1;
     max-height: rem(201);
     bottom: rem(62);
   }

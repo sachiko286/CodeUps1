@@ -1,8 +1,11 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-    // ハンバーガーメニュー
+    //ハンバーガーメニュー
     $(function () {
+
+        var scrollPosition; // scrollPositionの定義を追加
+
         $(".js-hamburger").on("click", function () {
             $(this).toggleClass("is-open");
             if ($(this).hasClass("is-open")) {
@@ -24,18 +27,36 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             }
         });
 
+        // function openDrawer() {
+        //     scrollPosition = $(window).scrollTop(); 
+        //     $(".js-drawer").fadeIn();
+        //     $(".js-hamburger").addClass("is-open");
+        //     $("body").addClass("fixed").css({ top: -scrollPosition });
+        // }
+
+        // function closeDrawer() {
+        //     $(".js-drawer").fadeOut();
+        //     $(".js-hamburger").removeClass("is-open");
+        //     $("body").removeClass("fixed").css({ top: 0 });
+        // }
         function openDrawer() {
+            scrollPosition = $(window).scrollTop(); 
             $(".js-drawer").fadeIn();
             $(".js-hamburger").addClass("is-open");
+            $("body").css({ 'overflow': 'hidden', 'height': '100%' }); // スクロール禁止を追加
+            $("body").addClass("fixed").css({scrollPosition});
         }
 
         function closeDrawer() {
             $(".js-drawer").fadeOut();
             $(".js-hamburger").removeClass("is-open");
+            $("body").css({ 'overflow': '', 'height': '' }); // スクロール禁止解除
+            $("body").removeClass("fixed").css({ top: 0 });
+            $(window).scrollTop(scrollPosition); // スクロール位置を復元
         }
 
-    });
 
+    });
 
     // Fvスライダー
     const mv_swiper = new Swiper(".js-fv-swiper", {
@@ -56,14 +77,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     const mySwiper = new Swiper('.js-campaign-swiper', { //名前を変える
         loop: true,
         loopAdditionalSlides: 1,
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
         speed: 2000,          //追記
         slidesPerView: "auto",
         spaceBetween: 24, // スライド間の余白（px）
-        centeredSlides: true, // アクティブなスライドを中央に配置する
         grabCursor: true, // PCでマウスカーソルを「掴む」マークにする
         breakpoints: {
             // 768px以上の場合
@@ -80,26 +100,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
     // Topに戻るボタン
-    $(function () {
-        const pageTop = $(".js-page-top");
-        pageTop.hide();
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 500) { // 100pxスクロールしたら発火
-                pageTop.fadeIn(); // 500px以上スクロールしたらボタンをフェードイン
-            } else {
-                pageTop.fadeOut(); // 500px以下になったらボタンをフェードアウト
-            }
-        });
-        pageTop.click(function () {
-            $("body,html").animate(
-                {
-                    scrollTop: 0,
-                },
-                500 // 500ミリ秒かけてページトップに戻る
-            );
-            return false;
-        });
-    });
+    // $(function () {
+    //     const pageTop = $(".js-page-top");
+    //     pageTop.hide();
+    //     $(window).scroll(function () {
+    //         if ($(this).scrollTop() > 500) { // 100pxスクロールしたら発火
+    //             pageTop.fadeIn(); // 500px以上スクロールしたらボタンをフェードイン
+    //         } else {
+    //             pageTop.fadeOut(); // 500px以下になったらボタンをフェードアウト
+    //         }
+    //     });
+    //     pageTop.click(function () {
+    //         $("body,html").animate(
+    //             {
+    //                 scrollTop: 0,
+    //             },
+    //             500 // 500ミリ秒かけてページトップに戻る
+    //         );
+    //         return false;
+    //     });
+    // });
 
     $(function () {
         // ページトップボタンを選択

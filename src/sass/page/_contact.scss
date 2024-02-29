@@ -8,11 +8,8 @@
   }
 }
 
-.contact__inner.inner {
+.contact__inner {
   max-width: rem(580);
-  @include mq(md) {
-    max-width: $inner + strip-unit($padding-pc) * 2;
-  }
 }
 
 .contact__content {

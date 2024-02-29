@@ -21,7 +21,7 @@
   font-weight: $regular;
   font-family: $font-family-la;
   letter-spacing: 0.54em;
-  margin-right: -0.54em;
+  text-indent: 0.54em;
   text-transform: uppercase;
   line-height: 1.2;
   @include mq(md) {
