@@ -1,0 +1,139 @@
+@use "global" as *;
+
+
+.campaign-card__item {
+  height: 100%;
+}
+
+.campaign-card__img img {
+  aspect-ratio: 280 / 188;
+  object-fit: cover;
+  width: 100%;
+
+  @include mq(md) {
+    aspect-ratio: 333 / 223;
+
+  }
+}
+
+.campaign-card__body {
+  padding: rem(16) rem(16) rem(21);
+
+  @include mq(md) {
+    padding: rem(24) rem(16) rem(35);
+
+  }
+}
+
+.campaign-card__category p {
+  font-size: rem(12);
+  font-family: $font-family-jp;
+  color: $green;
+  border: 1px solid $green;
+  padding: rem(5) rem(12) rem(5) rem(10);
+  display: inline-block;
+  @include mq(md) {
+      padding: rem(7) rem(15);
+  }
+}
+
+.campaign-card__title {
+  margin-top: rem(4);
+  padding-bottom: rem(8);
+  font-size: rem(16);
+  font-family: $font-family-jp;
+  font-weight: $medium;
+  border-bottom: 1px solid $green;
+}
+
+.campaign-card__text {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  font-family: $font-family-jp;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(16);
+    margin-top: rem(12);
+    text-align: start;
+    margin-left: rem(56);
+  }
+}
+
+.campaign-card__price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: rem(4);
+  font-family: $font-family-la;
+  @include mq(md) {
+      justify-content: flex-start;
+      margin-left: rem(20);
+      margin-top: rem(3);
+  }
+
+}
+
+.campaign-card__price-original {
+  color: #C94800;
+  text-decoration: line-through 3px;
+  font-size: rem(20);
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+
+}
+
+.campaign-card__price-original span {
+  color: black;
+  font-size: rem(20);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(24);
+    
+  }
+}
+
+
+.campaign-card__price-discount {
+  font-size: rem(32);
+  font-weight: $bold;
+  color: $green;
+  margin-left: rem(19);
+  font-family: $font-family-la;
+  line-height: 1.2;
+  @include mq(md) {
+    font-size: rem(40);
+    margin-left: rem(26);
+  }
+}
+
+.campaign__button {
+  text-align: center;
+  margin-top: rem(30);
+  // position: relative;
+  // right: rem(2);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}
+
+.campaign-card__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.campaign-card__title {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+

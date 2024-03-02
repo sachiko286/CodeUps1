@@ -33,7 +33,7 @@
   max-width: rem(580);
 }
 
-.blog-list {
+.blog__list {
   margin-top: rem(27);
   @include mq(md) {
     margin-top: rem(80);

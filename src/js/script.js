@@ -27,18 +27,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             }
         });
 
-        // function openDrawer() {
-        //     scrollPosition = $(window).scrollTop(); 
-        //     $(".js-drawer").fadeIn();
-        //     $(".js-hamburger").addClass("is-open");
-        //     $("body").addClass("fixed").css({ top: -scrollPosition });
-        // }
-
-        // function closeDrawer() {
-        //     $(".js-drawer").fadeOut();
-        //     $(".js-hamburger").removeClass("is-open");
-        //     $("body").removeClass("fixed").css({ top: 0 });
-        // }
         function openDrawer() {
             scrollPosition = $(window).scrollTop(); 
             $(".js-drawer").fadeIn();
@@ -77,10 +65,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     const mySwiper = new Swiper('.js-campaign-swiper', { //名前を変える
         loop: true,
         loopAdditionalSlides: 1,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: false,
+        // },
         speed: 2000,          //追記
         slidesPerView: "auto",
         spaceBetween: 24, // スライド間の余白（px）
