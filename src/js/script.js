@@ -4,47 +4,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     //ハンバーガーメニュー
     $(function () {
 
-        var scrollPosition; // scrollPositionの定義を追加
-
         $(".js-hamburger").on("click", function () {
-            $(this).toggleClass("is-open");
-            if ($(this).hasClass("is-open")) {
-                openDrawer();
-            } else {
-                closeDrawer();
-            }
+            $(this).toggleClass("is-open");//ボタンの開閉
+            $(".js-drawer").fadeToggle();//ドロワーメニュをフェードイン、フォードアウト
+            $('body').toggleClass('header__drawer-noscroll'); // 背景スクロール設定、解除
         });
 
-        // backgroundまたはページ内リンクをクリックで閉じる
+        // backgroundまたはページ内リンクをクリックでドロワーメニュが閉じる
         $(".header__drawer, .js-drawer a[href]").on("click", function () {
-            closeDrawer();
+            closeDrawer(); 
         });
 
-        // resizeイベント
+        // resizeイベント　ウインドウ幅が広がるとドロワーメニューが閉じる
         $(window).on('resize', function () {
             if (window.matchMedia("(min-width: 768px)").matches) {
                 closeDrawer();
             }
         });
 
-        function openDrawer() {
-            scrollPosition = $(window).scrollTop(); 
-            $(".js-drawer").fadeIn();
-            $(".js-hamburger").addClass("is-open");
-            $("body").css({ 'overflow': 'hidden', 'height': '100%' }); // スクロール禁止を追加
-            $("body").addClass("fixed").css({scrollPosition});
-        }
-
         function closeDrawer() {
-            $(".js-drawer").fadeOut();
-            $(".js-hamburger").removeClass("is-open");
-            $("body").css({ 'overflow': '', 'height': '' }); // スクロール禁止解除
-            $("body").removeClass("fixed").css({ top: 0 });
-            $(window).scrollTop(scrollPosition); // スクロール位置を復元
+            $(".js-drawer").fadeOut();//ドロワーメニューをフェードアウト
+            $(".js-hamburger").removeClass("is-open");//ボタンからクラス名「is-open」を取る
+            $('body').removeClass('header__drawer-noscroll');//背景スクロール解除  
         }
-
 
     });
+
+
 
     // Fvスライダー
     const mv_swiper = new Swiper(".js-fv-swiper", {
@@ -86,73 +72,83 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
 
-
-    // Topに戻るボタン
     // $(function () {
+    //     // ページトップボタンを選択
     //     const pageTop = $(".js-page-top");
     //     pageTop.hide();
+
     //     $(window).scroll(function () {
-    //         if ($(this).scrollTop() > 500) { // 100pxスクロールしたら発火
-    //             pageTop.fadeIn(); // 500px以上スクロールしたらボタンをフェードイン
+    //         // スクロール量を取得
+    //         const scrollTop = $(this).scrollTop();
+    //         // ドキュメントの高さ
+    //         const documentHeight = $(document).height();
+    //         // ウィンドウの高さ
+    //         const windowHeight = $(window).height();
+    //         // フッターの高さ
+    //         const footerHeight = $("footer").innerHeight();
+    //         // フッターが画面内に入ってくるスクロール位置
+    //         const fadeStart = documentHeight - windowHeight - footerHeight;
+
+    //         if (scrollTop > 500) {
+    //             pageTop.fadeIn();
+    //             // フッターの手前でボタンの位置を調整
+    //             if (scrollTop > fadeStart) {
+    //                 pageTop.css({
+    //                     position: "absolute",
+    //                     bottom: footerHeight + 16  // ボタンの位置をフッターの高さ + 余白に設定
+    //                 });
+    //             } else {
+    //                 pageTop.css({
+    //                     position: "fixed",
+    //                     bottom: "20px" // 元の位置に戻す
+    //                 });
+    //             }
     //         } else {
-    //             pageTop.fadeOut(); // 500px以下になったらボタンをフェードアウト
+    //             pageTop.fadeOut();
     //         }
     //     });
+
+    //     // ボタンをクリックしたらトップへスムーズスクロール
     //     pageTop.click(function () {
-    //         $("body,html").animate(
-    //             {
-    //                 scrollTop: 0,
-    //             },
-    //             500 // 500ミリ秒かけてページトップに戻る
-    //         );
+    //         $("body,html").animate({
+    //             scrollTop: 0,
+    //         }, 500);
     //         return false;
     //     });
     // });
 
-    $(function () {
-        // ページトップボタンを選択
-        const pageTop = $(".js-page-top");
-        pageTop.hide();
-
-        $(window).scroll(function () {
-            // スクロール量を取得
-            const scrollTop = $(this).scrollTop();
-            // ドキュメントの高さ
-            const documentHeight = $(document).height();
-            // ウィンドウの高さ
-            const windowHeight = $(window).height();
-            // フッターの高さ
-            const footerHeight = $("footer").innerHeight();
-            // フッターが画面内に入ってくるスクロール位置
-            const fadeStart = documentHeight - windowHeight - footerHeight;
-
-            if (scrollTop > 500) {
-                pageTop.fadeIn();
-                // フッターの手前でボタンの位置を調整
-                if (scrollTop > fadeStart) {
-                    pageTop.css({
-                        position: "absolute",
-                        bottom: footerHeight + 16  // ボタンの位置をフッターの高さ + 余白に設定
-                    });
+        //トップへ戻るボタン
+        $(function () {
+            const pagetop = $(".js-page-top");
+            pagetop.hide(); //最初はボタンを非表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) { //100px以上スクロールしたら
+                pagetop.fadeIn(); //ボタンをフェードイン
                 } else {
-                    pageTop.css({
-                        position: "fixed",
-                        bottom: "20px" // 元の位置に戻す
-                    });
+                pagetop.fadeOut(); //ボタンをフェードアウト
                 }
-            } else {
-                pageTop.fadeOut();
-            }
-        });
-
-        // ボタンをクリックしたらトップへスムーズスクロール
-        pageTop.click(function () {
-            $("body,html").animate({
-                scrollTop: 0,
-            }, 500);
-            return false;
-        });
-    });
+            });
+            pagetop.click(function () {
+                $("body,html").animate({
+                    scrollTop: 0, //上から0pxの位置に戻る
+                },500); //500ミリ秒かけて上に戻る
+                return false;
+            });
+        
+            //フッター手前で止まるボタン
+            $(".js-page-top").hide();
+            $(window).on("scroll", function () {
+                const scrollHeight = $(document).height(); //ドキュメントの高さ
+                const scrollPosition = $(window).height() + $(window).scrollTop(); //現在の位置
+                const footHeight = $("footer").innerHeight(); //フッターの高さ
+                if (scrollHeight - scrollPosition <= footHeight) { //ドキュメントの高さと現在の位置の差がフッターの高さ以下のとき
+                $(".js-page-top").css({ position: "absolute", bottom: footHeight + 0 }); //pisitionをabsoluteに変更 ボタンの位置をフッターの高さ + 余白に設定
+                } else { //それ以外の場合は
+                $(".js-page-top").css({ position: "fixed", bottom: "0" }); //固定で表示
+                }
+            });
+        }); 
+        
 
 
     // 背景色の後に画像が表示されるアニメーション
