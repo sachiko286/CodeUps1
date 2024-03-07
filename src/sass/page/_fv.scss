@@ -81,6 +81,9 @@
   object-fit: cover;
 }
 
+.fv__sp-swiper .swiper-slide.swiper-slide-active .swiper-img,
+.fv__sp-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.fv__sp-swiper .swiper-slide.swiper-slide-prev .swiper-img, 
 .fv__pc-swiper .swiper-slide.swiper-slide-active .swiper-img,
 .fv__pc-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
 .fv__pc-swiper .swiper-slide.swiper-slide-prev .swiper-img {
