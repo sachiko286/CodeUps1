@@ -156,7 +156,6 @@
   background-color: $green;
   overflow-y: scroll;
   scrollbar-width: none;
-  // opacity: 0.6;
 }
 
 .header__drawer::-webkit-scrollbar {
@@ -198,18 +197,18 @@
   line-height: calc(18 / 16);
 }
 
-.header__drawer-list-item {
+.header__drawer-list-items {
   margin-top: rem(24);
   margin-left: rem(22);
 }
 
-.header__drawer-list-items {
+.header__drawer-list-item {
   font-size: rem(16);
   line-height: calc(18 / 16);
 }
 
 
-.header__drawer-list-items + .header__drawer-list-items {
+.header__drawer-list-item + .header__drawer-list-item {
   margin-top: rem(24);
 }
 
