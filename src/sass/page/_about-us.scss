@@ -1,214 +1,7 @@
 @use "global" as *;
 
-// .about-us {
-//   margin-top: rem(84);
-//   position: relative;
-//   @include mq(md) {
-//       margin-top: rem(138);
-//   }
-// }
-
-// .about-us__inner{
-//   position: relative;
-//   max-width: rem(580);
-// }
-
-// .about-us__wrapper {
-//   position: relative;
-//   margin-top: rem(28);
-//   @include mq(md) {
-//       margin-top: rem(40);
-//   }
-// }
-
-// .about-us__images {
-//   position: relative;
-//   aspect-ratio: 345 / 212;
-//   max-width: rem(580);
-//   @include mq(md) {
-//       max-width: $inner + strip-unit($padding-pc) * 2;
-//       aspect-ratio: 1080 / 661;
-//   }
-// }
-
-// .about-us__image1 {
-//   position: absolute;
-//   z-index: 1;
-//   width: calc(128 / 345*100%);
-//   aspect-ratio: 128 / 194;
-//   top:0;
-//   left: 0;
-//   @include mq(md) {
-//     width: calc(400 / 1080*100%);
-//     aspect-ratio: 400 / 606;
-//   }
-// }
-
-// .about-us__image1 img {
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .about-us__image2 {
-//   position: absolute;
-//   z-index: 0;
-//   // width: calc(281 / 345*100%);
-//   width: 81.449279%;
-//   aspect-ratio: 281 / 186;
-//   bottom: 0;
-//   right: 0;
-//   @include mq(md) {
-//     width: calc(880 / 1080*100%);
-//     aspect-ratio: 880 / 581;
-//   }
-// }
-
-// .about-us__image2 img {
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// // .about-us__images {
-// //   margin-top: rem(24);
-// //   position: relative;
-// //   aspect-ratio: 345 / 212;  
-// //   @include mq(md) {
-// //     max-width: rem(1080);
-// //     max-height: rem(661);
-// //     width: 100%;
-// //   }
-
-// // }
-
-// // .about-us__image1 {
-// //   position: absolute;
-// //   z-index: 1;
-// //   width: 100%;
-// //   height: 100%;  
-// //   overflow: hidden;
-// //   padding-bottom: calc(18 / 375 * 100vw);
-// //   // padding-right: calc(217 / 375 * 100vw);
-// //   @include mq(md) {
-// //     padding-bottom: rem(0);
-// //     padding-right: rem(0);  
-// //   }
-// // }
-
-// // .about-us__image1 img {
-// //   width: auto;
-// //   height: 100%;
-// //   object-fit: cover;
-// //   @include mq(md) {
-// //     max-width: rem(400);
-// //     max-height: rem(606);
-
-// //   }
-// // }
-
-// // .about-us__image2 {
-// //   position: absolute;
-// //   z-index: 0;
-// //   padding-top: calc(26 / 375 * 100vw);
-// //   padding-left: calc(64 / 375 * 100vw);
-// //   @include mq(md) {
-// //     // padding-top: calc(80 / 1440 * 100vw);
-// //     // padding-left: calc(200 / 1440 * 100vw);
-// //     padding-top: rem(0);
-// //     padding-left: rem(0);
-// //     max-width: rem(880);
-// //     right: 0;
-// //     bottom: 0;
-// //   }
-// // }
-
-
-// .about-us__content {
-//   margin-top: rem(40);
-//   @include mq(md) {
-//       display: flex;
-//       max-width: rem(840);
-//       position: absolute;
-//       bottom: rem(222);
-//       right: rem(40);
-//       z-index: 3;
-//   }
-// }
-
-// .about-us__sub-title {
-//   font-size: rem(40);
-//   line-height: 1;
-//   font-family: $font-family-en;
-//   color: $green;
-//   font-weight: $regular;
-//   @include mq(md) {
-//       width: 50%;
-//       font-size: rem(80);
-//       color: $white;
-//       line-height: 1.25;
-//   }
-// }
-// .about-us__content-body {
-//   @include mq(md) {
-//       width: 50%;
-//       margin-left: rem(38);
-//   }
-// }
-// .about-us__text {
-//   margin-top: rem(16);
-//   font-size: rem(16);
-//   @include mq(md) {
-//       margin-top: rem(0);
-//       color: $white
-//   }
-// }
-
-// .about-us__button {
-//   margin-top: rem(49);
-//   text-align: center;
-//   position: relative;
-//   right: rem(2);
-//   // right: rem(9);(カンプに合わせるとこちら）
-//   @include mq(md) {
-//       margin-top: rem(40);
-//   }
-// }
-
-// .about-us__block-img {
-//   display: none;
-//   @include mq(md) {
-//     display: block;
-//     max-width: rem(1324);
-//     width: 100%;
-//     left: 50%;
-//     transform: translate(-50%);
-//     position: absolute;
-//     bottom: rem(-90);
-//     text-align: right;
-//     padding-right: rem(25);
-//     z-index: 1;
-//     max-height: rem(181);
-  
-//   }
-// }
-
-// .about-us__block-img img {
-//   max-width: rem(194);
-//   display: inline-block;
-// }
-
-//------------------------------------------------------------
-
-
-.about-us {
-  margin-top: rem(84);
-  position: relative;
-  @include mq(md) {
-      margin-top: rem(138);
-  }
-}
-
 .about-us__inner{
-  position: relative;
+  // position: relative;
   max-width: rem(580);
 }
 
@@ -221,35 +14,51 @@
 }
 
 .about-us__images {
-  background-image: url(../images/common/about2.jpg);
-  background-repeat:  no-repeat;       
-  background-size: calc(281 / 345)*100% calc(186 / 212)*100%;  
-  background-position: right bottom;
-  aspect-ratio: 345 / 212;
-  @include mq(md) {
-    aspect-ratio: 1080 / 661;
-    background-size: calc(880 / 1080)*100% calc(581 / 661)*100% ;  
-
-  }
+  display: flex;
+  justify-content: center;
 }
 
 .about-us__image1 {
-  position: relative;
-  z-index: 1;
   width: calc(128 / 345*100%);
+  z-index: 1;
   aspect-ratio: 128 / 194;
-  top:0;
-  left: 0;
+@include mq(md) {
+  width: calc(400 / 1080*100%);
+  aspect-ratio: 400 / 606;
+
+}
+}
+
+.about-us__image1 img {
+  aspect-ratio: 128 / 194;
+  object-fit: cover;
   @include mq(md) {
-    width: calc(400 / 1080*100%);
     aspect-ratio: 400 / 606;
   }
 }
 
-.about-us__image1 img {
-  height: 100%;
-  object-fit: cover;
+.about-us__image2 {
+  margin-top: calc(26 / 345*100%);
+  margin-left: calc(-64 / 345*100%);
+  width: 100% - (64 / 345*100%);
+  min-width: rem(281);
+  @include mq(md) {
+    margin-top: calc(80 / 1080*100%);
+    margin-left: calc(-200 / 1080*100%);
+    width: 100% - (200 / 1080*100%);
+  }
+    
+
 }
+
+.about-us__image2 img {
+  aspect-ratio: 281 / 186;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 880 / 581;
+  }
+}
+
 
 .about-us__content {
   margin-top: rem(40);
@@ -294,8 +103,9 @@
 .about-us__button {
   margin-top: rem(49);
   text-align: center;
-  // position: relative;
-  // right: rem(2);
+  position: relative;
+  right: rem(2);
+  // right: rem(9);(カンプに合わせるとこちら）
   @include mq(md) {
       margin-top: rem(40);
   }
@@ -305,17 +115,12 @@
   display: none;
   @include mq(md) {
     display: block;
-    max-width: rem(1324);
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%);
+    width: rem(194);
+    height: rem(181);
     position: absolute;
     bottom: rem(-90);
-    text-align: right;
-    padding-right: rem(25);
     z-index: 1;
-    max-height: rem(181);
-  
+    right: calc(50% - #{min(48vw, rem(637))});
   }
 }
 

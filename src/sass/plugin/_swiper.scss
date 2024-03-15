@@ -1,5 +1,158 @@
 @use "global" as *;
 
+// .swiper-container {
+//   position: relative;
+// }
+
+// .swiper {
+//   position: relative;
+//   margin-right: calc(50% - 50vw)
+// }
+
+// .swiper-wrapper {
+//   position: relative;
+  
+// }
+
+
+// .swiper-button-wrapper {
+//   // padding-right: rem(180);
+//   max-width: rem(1080);
+//   margin-inline: auto;
+//   display: flex;
+//   justify-content: right;
+// }
+
+// .swiper-button-prev,
+// .swiper-button-next {
+//   position: relative;
+//   max-width: rem(80);
+//   width: 100%;
+//   bottom: rem(20);
+//   color: $green;
+
+// }
+// .swiper-button-prev {
+//       // top:rem(-20);
+//   // transform: translateY(-50%);
+//   // display: none;
+//   @include mq(md) {
+//     display: block;
+//   }
+// }
+  
+// .swiper-button-prev::after {
+//   content: '';
+// }
+
+// .swiper-button-arrow-p {
+//   display: none;
+
+//   @include mq(md) {
+//     display: inline-block;
+//     // vertical-align: middle;
+//     line-height: 1;
+//     position: absolute;
+//     width: rem(40);
+//     height: rem(1);
+//     background: currentColor;
+//     // margin-left: rem(4);
+//     right: rem(110);
+    
+//   }
+// }
+
+// .swiper-button-arrow-p::before {
+//   content: '';
+//   width: rem(6);
+//   border: 1px solid currentColor;
+//   border-left: 0;
+//   border-bottom: 0;
+//   transform: rotate(135deg);
+//   transform-origin: top right;
+//   position: absolute;
+//   // top: 50%;
+//   left: rem(-4);
+// }
+
+// .swiper-button-arrow-p::after {
+//   content: '';
+//   position: absolute;
+//   border: 1px solid $green;
+//   width: rem(80);
+//   height: rem(80);
+//   border-radius: 50%;
+//   bottom: rem(-38);
+//   right: rem(-20);
+//   transition:  0.3s;
+// }
+
+
+// .swiper-button-next {
+//   //位置はここで指定
+//     // top:rem(-20);
+//   // transform: translateY(-50%);
+//   // display: none;
+//   @include mq(md) {
+//     display: block;
+//   }
+// }
+
+// .swiper-button-next::after {
+//   content: '';
+// }
+
+
+// .swiper-button-arrow-n {
+//   display: none;
+
+//   @include mq(md) {
+//     display: inline-block;
+//     // vertical-align: middle;
+//     line-height: 1;
+//     position: absolute;
+//     width: rem(40);
+//     height: rem(1);
+//     background: currentColor;
+//     // margin-left: rem(8);
+//     right: rem(10);
+//   }
+// }
+
+// .swiper-button-arrow-n::before {
+//   content: '';
+//   width: rem(6);
+//   border: 1px solid currentColor;
+//   border-left: 0;
+//   border-bottom: 0;
+//   transform: rotate(45deg);
+//   transform-origin: top right;
+//   position: absolute;
+//   // top: 50%;
+//   right: rem(-0.5);
+// }
+
+// .swiper-button-arrow-n::after {
+//   content: '';
+//   position: absolute;
+//   border: 1px solid $green;
+//   width: rem(80);
+//   height: rem(80);
+//   border-radius: 50%;
+//   bottom: rem(-38);
+//   right: rem(-20);
+//   transition:  0.3s;
+// }
+
+
+// .swiper-button-arrow-p:hover::after,
+// .swiper-button-arrow-n:hover::after {
+//   background-color:  rgba(0, 0, 0, 0.1);
+// }
+
+
+//-------------------------------------------------------------------------
+
 .swiper-container {
   position: relative;
 }
@@ -12,142 +165,85 @@
 .swiper-wrapper {
   position: relative;
   
+  
 }
 
 
 .swiper-button-wrapper {
-  // padding-right: rem(180);
-  max-width: rem(1080);
-  margin-inline: auto;
-  display: flex;
-  justify-content: right;
+
 }
+
+// .swiper-button-prev,
+// .swiper-button-next {
+// }
+
+// .swiper-button-prev {
+
+// }
+  
+// .swiper-button-prev::after {
+//   content: '';
+// }
+
+
+
+
+// .swiper-button-next {
+//   //位置はここで指定
+//     // top:rem(-20);
+//   // transform: translateY(-50%);
+//   // display: none;
+//   @include mq(md) {
+//     display: block;
+//   }
+// }
+
+// .swiper-button-next::after {
+//   content: '';
+// }
+
 
 .swiper-button-prev,
 .swiper-button-next {
-  position: relative;
-  max-width: rem(80);
-  width: 100%;
-  bottom: rem(20);
-  color: $green;
-
-}
-.swiper-button-prev {
-      // top:rem(-20);
-  // transform: translateY(-50%);
-  // display: none;
-  @include mq(md) {
-    display: block;
-  }
-}
+    @include mq(md) {
+      width: rem(80);
+      height: rem(80);
+      top: rem(-105);
+      margin-top: rem(0);
   
-.swiper-button-prev::after {
-  content: '';
+    }
 }
 
-.swiper-button-arrow-p {
-  display: none;
-
-  @include mq(md) {
-    display: inline-block;
-    // vertical-align: middle;
-    line-height: 1;
-    position: absolute;
-    width: rem(40);
-    height: rem(1);
-    background: currentColor;
-    // margin-left: rem(4);
-    right: rem(110);
-    
-  }
+.swiper-button-prev {
+  left: 77.8%;
 }
-
-.swiper-button-arrow-p::before {
-  content: '';
-  width: rem(6);
-  border: 1px solid currentColor;
-  border-left: 0;
-  border-bottom: 0;
-  transform: rotate(135deg);
-  transform-origin: top right;
-  position: absolute;
-  // top: 50%;
-  left: rem(-4);
-}
-
-.swiper-button-arrow-p::after {
-  content: '';
-  position: absolute;
-  border: 1px solid $green;
-  width: rem(80);
-  height: rem(80);
-  border-radius: 50%;
-  bottom: rem(-38);
-  right: rem(-20);
-  transition:  0.3s;
-}
-
 
 .swiper-button-next {
-  //位置はここで指定
-    // top:rem(-20);
-  // transform: translateY(-50%);
-  // display: none;
-  @include mq(md) {
-    display: block;
-  }
+  right: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.swiper-button-prev::after {
+    background-image: url(/assets/images/common/btn-prev.svg);
 }
 
 .swiper-button-next::after {
-  content: '';
+    background-image: url(/assets/images/common/btn-next.svg);
 }
 
-
-.swiper-button-arrow-n {
-  display: none;
-
-  @include mq(md) {
-    display: inline-block;
-    // vertical-align: middle;
-    line-height: 1;
-    position: absolute;
-    width: rem(40);
-    height: rem(1);
-    background: currentColor;
-    // margin-left: rem(8);
-    right: rem(10);
-  }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.6;
 }
-
-.swiper-button-arrow-n::before {
-  content: '';
-  width: rem(6);
-  border: 1px solid currentColor;
-  border-left: 0;
-  border-bottom: 0;
-  transform: rotate(45deg);
-  transform-origin: top right;
-  position: absolute;
-  // top: 50%;
-  right: rem(-0.5);
-}
-
-.swiper-button-arrow-n::after {
-  content: '';
-  position: absolute;
-  border: 1px solid $green;
-  width: rem(80);
-  height: rem(80);
-  border-radius: 50%;
-  bottom: rem(-38);
-  right: rem(-20);
-  transition:  0.3s;
-}
-
-
-.swiper-button-arrow-p:hover::after,
-.swiper-button-arrow-n:hover::after {
-  background-color:  rgba(0, 0, 0, 0.1);
-}
-
-

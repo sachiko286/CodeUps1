@@ -9,8 +9,6 @@
       margin-top: rem(160);
       padding-top: rem(80);
       padding-bottom: rem(80);
-
-
   }
 }
 
@@ -154,7 +152,8 @@
 }
 
 .footer__sns a:hover {
-	transform: translateY(-2px);
+	// transform: translateY(-2px);
+  opacity: 0.6;
 }
 
 
@@ -165,5 +164,6 @@
 }
 
 .footer__nav a:hover{
-  color: $darkgreen;
+  opacity: 0.6;
 }
+

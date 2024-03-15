@@ -1,11 +1,6 @@
 @use "global" as *;
 
 .header {
-  position: fixed;
-  z-index: 900;
-  top: 0;
-  right: 0;
-  left: 0;
   height: rem(80);
   background-color: rgba(13, 41, 54, 0.68);
   @include mq("md") {
@@ -33,11 +28,6 @@
   }
 }
 
-// .header__logo a {
-//   height: inherit;
-//   display: flex;
-//   align-items: center;
-// }
 
 .header__logo img {
   // width: 100%;
@@ -64,7 +54,6 @@
 
 .header__nav-item a {
   padding: 0 rem(20);
-  // margin: 0 rem(20);
   height: inherit;
   display: flex;
   justify-content: center;
@@ -76,17 +65,8 @@
   color: $white;
   top: rem(-2);
   right: rem(2);
-
 }
 
-.header__nav-item:first-child a {
-  // padding-left: 0;
-  margin-left: rem(0);
-}
-.header__nav-item:last-child a {
-  // padding-right: 0;
-  margin-right: rem(0);
-}
 
 .header__nav-item span {
   margin-top: rem(7);
@@ -260,7 +240,7 @@ position: relative;
   position: absolute;
   bottom: rem(20);
   /*線の形状*/
-  width: 100%;
+  width: 80%;
   height: rem(2);
   background:#fff;
   /*アニメーションの指定*/
