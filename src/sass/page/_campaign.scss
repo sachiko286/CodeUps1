@@ -7,3 +7,13 @@
   }
 }
 
+.campaign__button {
+  text-align: center;
+  margin-top: rem(30);
+  padding-bottom: rem(4);
+  // position: relative;
+  // right: rem(2);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}

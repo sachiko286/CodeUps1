@@ -15,6 +15,7 @@
   cursor: pointer;
   background-color: $white;
   z-index: 100;
+  transition: .3s;
   @include mq(md) {
     right: rem(20);
     width: rem(80);
@@ -23,7 +24,7 @@
   }
 }
 .page-top:hover {
-  background-color:  rgb(233, 233, 233);
+  opacity: 0.6;
 }
 
 .page-top__yazirusi {
