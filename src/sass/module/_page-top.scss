@@ -15,7 +15,6 @@
   cursor: pointer;
   background-color: $white;
   z-index: 100;
-  transition: .3s;
   @include mq(md) {
     right: rem(20);
     width: rem(80);
@@ -52,7 +51,6 @@
     height: rem(6);
     bottom: 0;
   }
-
 }
 
 // body {
