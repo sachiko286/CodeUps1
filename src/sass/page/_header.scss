@@ -1,17 +1,5 @@
 @use "global" as *;
 
-.header {
-  // position: fixed;
-  // z-index: 900;
-  // top: 0;
-  // right: 0;
-  // left: 0;
-  // height: rem(80);
-  // background-color: rgba(13, 41, 54, 0.68);
-  // @include mq("md") {
-  //     height: rem(90);
-  // }
-}
 
 .header__inner {
   padding: 0 rem(15);
@@ -40,7 +28,7 @@
   object-fit: contain;
 }
 
-.header__nav {
+.header__pc-nav {
   display: none;
   height: inherit;
   @include mq("md") {
@@ -48,38 +36,6 @@
   }
 }
 
-.header__nav-items {
-  display: flex;
-  height: inherit;
-}
-
-.header__nav-item {
-  height: inherit;
-}
-
-.header__nav-item a {
-  padding: 0 rem(20);
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: rem(18);
-  font-family: $font-family-en;
-  line-height: 1;
-  color: $white;
-  top: rem(-2);
-  right: rem(2);
-}
-
-
-.header__nav-item span {
-  margin-top: rem(7);
-  display: block;
-  font-size: rem(10);
-  font-family: $font-family-jp;
-  font-weight: $regular;
-}
 
 .header__hamburger {
   margin: 0;
@@ -170,8 +126,6 @@
 
 }
 
-
-
 .header__drawer-nav {
   color: $white;
   column-count: 2;
@@ -179,84 +133,6 @@
   padding-top: rem(104);
 }
 
-
-.header__drawer-list-box + .header__drawer-list-box {
-  margin-top: rem(40);
-}
-
-.header__drawer-list-category span {
-  display: inline-block;
-  width: rem(18);
-  margin-right: rem(4);
-  vertical-align: bottom;
-}
-
-.header__drawer-list-category {
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: calc(18 / 16);
-}
-
-.header__drawer-list-items {
-  margin-top: rem(24);
-  margin-left: rem(22);
-}
-
-.header__drawer-list-item {
-  font-size: rem(16);
-  line-height: calc(18 / 16);
-}
-
-
-.header__drawer-list-item + .header__drawer-list-item {
-  margin-top: rem(24);
-}
-
-
-.header__drawer-list-category-polcy {
-  padding-left: rem(22);
-  text-indent: rem(-22);
-}
-
-.header__drawer-nav a {
-  display: block;
-  transition: .3s;
-}
-
-.header__drawer-nav a:hover{
-  opacity: 0.6;
-}
-
-
-/*==================================================
-5-3-1 中心から外に線が伸びる（下部）
-===================================*/
-
-.header__nav-item a{
-  /*線の基点とするためrelativeを指定*/
-position: relative;
-}
-
-
-.header__nav-item a::after {
-  content: '';
-  /*絶対配置で線の位置を決める*/
-  position: absolute;
-  bottom: rem(20);
-  /*線の形状*/
-  width: 80%;
-  height: rem(2);
-  background:#fff;
-  /*アニメーションの指定*/
-  transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
-}
-
-/*現在地とhoverの設定*/
-.header__nav-item a:hover::after  {
-  transform: scale(1, 1);/*X方向にスケール拡大*/
-}
 
 .header__drawer-noscroll{
   overflow: hidden;

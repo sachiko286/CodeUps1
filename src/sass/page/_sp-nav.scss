@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+.sp-nav__list-box + .sp-nav__list-box {
+  margin-top: rem(40);
+}
+
+.sp-nav__list-category span {
+  display: inline-block;
+  width: rem(18);
+  margin-right: rem(4);
+  vertical-align: bottom;
+}
+
+.sp-nav__list-category {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(18 / 16);
+}
+
+.sp-nav__list-items {
+  margin-top: rem(24);
+  margin-left: rem(22);
+}
+
+.sp-nav__list-item {
+  font-size: rem(16);
+  line-height: calc(18 / 16);
+}
+
+
+.sp-nav__list-item + .sp-nav__list-item {
+  margin-top: rem(24);
+}
+
+
+.sp-nav__list-category-polcy {
+  padding-left: rem(22);
+  text-indent: rem(-22);
+}
+
+.sp-nav a {
+  display: block;
+  transition: .3s;
+}
+
+.sp-nav a:hover{
+  opacity: 0.6;
+}
+
