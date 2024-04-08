@@ -19,9 +19,7 @@
 }
 
 
-// .section-header__engtitle span {
-//   color: $green;
-// }
+
 
 .section-header__jatitle{
   font-size: rem(12);
@@ -29,4 +27,22 @@
   font-weight:$regular;
   color: $green;
   margin-top: rem(4);
+}
+
+.section-header--color .section-header__engtitle {
+  @include mq(md) {
+    color: $white;    
+  }
+}
+
+.section-header--color .section-header__engtitle::first-letter {
+  @include mq(md) {
+    color: $lightgreen; 
+  }
+}
+
+.section-header--color .section-header__jatitle {
+  @include mq(md) {
+    color: $white;    
+  }
 }

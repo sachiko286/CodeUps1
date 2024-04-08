@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.top-page-top {
+  position: fixed;
+  margin-bottom: rem(16);
+  right: rem(15);
+  z-index: 100;
+  @include mq(md) {
+    right: rem(20);
+    margin-bottom: rem(20);
+  }
+}

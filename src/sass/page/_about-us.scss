@@ -85,7 +85,7 @@
       line-height: 1.25;
   }
 }
-.about-us__content-body {
+.about-us__body {
   @include mq(md) {
       width: 50%;
       margin-left: rem(38);

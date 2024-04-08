@@ -37,23 +37,23 @@
   }
 }
 
-.blog__engtitle.section-header__engtitle {
-  @include mq(md) {
-    color: $white;    
-  }
-}
+// .blog__engtitle.section-header__engtitle {
+//   @include mq(md) {
+//     color: $white;    
+//   }
+// }
 
-.blog__engtitle.section-header__engtitle::first-letter {
-  @include mq(md) {
-    color: $lightgreen; 
-  }
-}
+// .blog__engtitle.section-header__engtitle::first-letter {
+//   @include mq(md) {
+//     color: $lightgreen; 
+//   }
+// }
 
-.blog__jatitle.section-header__jatitle {
-  @include mq(md) {
-    color: $white;
-  }
-}
+// .blog__jatitle.section-header__jatitle {
+//   @include mq(md) {
+//     color: $white;
+//   }
+// }
 
 .blog__block-img {
   display: none;
