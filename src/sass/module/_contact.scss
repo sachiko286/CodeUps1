@@ -126,18 +126,21 @@
 
 
 
-.contact__block-img {
-  // width: rem(109);
-  // height: rem(50);
+.contact::before {
+  content: "";
+  background-image: url("../images/common/contact-picture6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 29.07vw;
+  height: rem(51);
   position: absolute;
   top: rem(-26);
   z-index: 1;
-  right: calc(50% - #{max(48vw, rem(172.5))});
+  right: calc(50% - #{max(46vw, rem(172.5))});
   @include mq(md) {
     top: rem(-42);
-    width: rem(301);
-    height: rem(138);
+    width: rem(304);
+    height: rem(144);
     right: calc(50% - #{min(48vw, rem(670))});
 
   }

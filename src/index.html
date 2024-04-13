@@ -80,13 +80,6 @@
       </nav>
 
       <div class="header__drawer js-drawer">
-        <div class="header__drawer-top">
-          <h1 class="header__logo">
-            <a href="#">
-              <img src="./assets/images/common/CodeUps-w.svg" alt="ロゴ">
-            </a>
-          </h1>
-        </div>
         <nav class="header__drawer-nav sp-nav">
             <div class="sp-nav__list-box">
               <p class="sp-nav__list-category"><a href="#"><span><img src="./assets/images/common/hitode.png"
@@ -157,56 +150,48 @@
           <div class="fv__main-title">diving</div>
           <p class="fv__sub-title">into the ocean</p>
         </div>
-        <div class="fv__sp-swiper swiper js-fv-swiper">
-          <div class="fv__sp-slide-wrapper swiper-wrapper">
-            <div class="fv__sp-slide swiper-slide">
-              <div class="fv__sp-slide-image swiper-img">
+        <div class="fv__swiper swiper js-fv-swiper">
+          <div class="fv__slide-wrapper swiper-wrapper">
+            <div class="fv__slide swiper-slide">
+              <div class="fv__slide-image swiper-img">
+              <picture >
+                <source srcset="./assets/images/common/pc-fv1.jpg" alt="省略" media="(min-width: 768px)">
                 <img src="./assets/images/common/sp-fv1.jpg" alt="省略">
-              </div>
+              </picture>
             </div>
-            <div class="fv__sp-slide swiper-slide">
-              <div class="fv__sp-slide-image swiper-img">
+            </div>
+            <div class="fv__slide swiper-slide">
+              <div class="fv__slide-image swiper-img">
+
+              <picture>
+                <source srcset="./assets/images/common/pc-fv2.jpg" alt="省略" media="(min-width: 768px)">
                 <img src="./assets/images/common/sp-fv2.jpg" alt="省略">
+              </picture>
               </div>
             </div>
-            <div class="fv__sp-slide swiper-slide">
-              <div class="fv__sp-slide-image swiper-img">
+            <div class="fv__slide swiper-slide">
+              <div class="fv__slide-image swiper-img">
+
+              <picture>
+                <source srcset="./assets/images/common/pc-fv3.jpg" alt="省略" media="(min-width: 768px)">
                 <img src="./assets/images/common/sp-fv3.jpg" alt="省略">
+              </picture>
               </div>
             </div>
-            <div class="fv__sp-slide swiper-slide">
-              <div class="fv__sp-slide-image swiper-img">
+            <div class="fv__slide swiper-slide">
+              <div class="fv__slide-image swiper-img">
+
+              <picture>
+                <source srcset="./assets/images/common/pc-fv4.jpg" alt="省略" media="(min-width: 768px)">
                 <img src="./assets/images/common/sp-fv4.jpg" alt="省略">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fv__pc-swiper swiper js-fv-swiper">
-          <div class="fv__pc-slide-wrapper swiper-wrapper">
-            <div class="fv__pc-slide swiper-slide">
-              <div class="fv__pc-slide-image swiper-img">
-                <img src="./assets/images/common/pc-fv1.jpg" alt="省略">
-              </div>
-            </div>
-            <div class="fv__pc-slide swiper-slide">
-              <div class="fv__pc-slide-image swiper-img">
-                <img src="./assets/images/common/pc-fv2.jpg" alt="省略">
-              </div>
-            </div>
-            <div class="fv__pc-slide swiper-slide">
-              <div class="fv__pc-slide-image swiper-img">
-                <img src="./assets/images/common/pc-fv3.jpg" alt="省略">
-              </div>
-            </div>
-            <div class="fv__pc-slide swiper-slide">
-              <div class="fv__pc-slide-image swiper-img">
-                <img src="./assets/images/common/pc-fv4.jpg" alt="省略">
+              </picture>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
 
     <section class="campaign top-campaign">
@@ -321,10 +306,6 @@
     </section>
 
     <section class="about-us top-about-us">
-      <div class="about-us__block-img">
-        <img src="./assets/images/common/about-picture1.png" alt="サンゴ">
-      </div>
-
       <div class="about-us__inner inner">
         <div class="about-us__header section-header">
           <p class="section-header__engtitle">About us</p>
@@ -380,51 +361,55 @@
 
     <section class="blog top-blog">
       <div class="blog__bg"></div>
-      <div class="blog__block-img">
-        <img src="./assets/images/common/blog-picture2.png" alt="サカナの絵">
-      </div>
       <div class="blog__inner inner">
         <div class="blog__header section-header section-header--color">
-          <p class="blog__engtitle section-header__engtitle">Blog</p>
-          <h2 class="blog__jatitle section-header__jatitle">ブログ</h2>
+          <p class="section-header__engtitle">Blog</p>
+          <h2 class="section-header__jatitle">ブログ</h2>
         </div>
         <ul class="blog__list blog-list">
-          <li>
-            <a href="#" class="blog-list__item blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog1.jpg" alt="省略">
-              </div>
-              <div class="blog-card__content">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <p class="blog-card__title">ライセンス取得</p>
-                <p class="blog-card__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="blog-list__item blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog2.jpg" alt="省略">
-              </div>
-              <div class="blog-card__content">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <p class="blog-card__title">ウミガメと泳ぐ</p>
-                <p class="blog-card__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+          <li class="blog-list__item">
+            <a href="#" class="blog-card">
+              <div class="blog-card__inner">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog1.jpg" alt="省略">
+                </div>
+                <div class="blog-card__content">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <p class="blog-card__title">ライセンス取得</p>
+                  <p class="blog-card__text">
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                </div>
               </div>
             </a>
           </li>
-          <li>
-            <a href="#" class="blog-list__item blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog3.jpg" alt="省略">
+          <li class="blog-list__item">
+            <a href="#" class="blog-card">
+              <div class="blog-card__inner">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog2.jpg" alt="省略">
+                </div>
+                <div class="blog-card__content">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <p class="blog-card__title">ウミガメと泳ぐ</p>
+                  <p class="blog-card__text">
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                </div>
+  
               </div>
-              <div class="blog-card__content">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <p class="blog-card__title">カクレクマノミ</p>
-                <p class="blog-card__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+            </a>
+          </li>
+          <li class="blog-list__item">
+            <a href="#" class="blog-card">
+              <div class="blog-card__inner">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog3.jpg" alt="省略">
+                </div>
+                <div class="blog-card__content">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <p class="blog-card__title">カクレクマノミ</p>
+                  <p class="blog-card__text">
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                </div>
               </div>
             </a>
           </li>
@@ -437,56 +422,54 @@
     </section>
 
     <section class="voice top-voice">
-      <div class="voice__block-img-fish">
-        <img src="./assets/images/common/voice-picture3.png" alt="サカナの絵">
-      </div>
-      <div class="voice__block-img-seahorse">
-        <img src="./assets/images/common/voice-picture4.png" alt="タツノオトシゴの絵">
-      </div>
       <div class="voice__inner inner">
         <div class="voice__header section-header">
           <p class="section-header__engtitle">Voice</p>
           <h2 class="section-header__jatitle">お客様の声</h2>
         </div>
         <ul class="voice__list voice-list">
-          <li>
-            <a class="voice-list__item voice-card" href="#">
-              <div class="voice-card__header">
-                <div class="voice-card__lead">
-                  <div class="voice-card__meta">
-                    <p class="voice-card__age">20代(女性)</p>
-                    <p class="voice-card__category">ライセンス講習</p>
+          <li class="voice-list__item">
+            <a class="voice-card" href="#">
+              <div class="voice-card__inner">
+                <div class="voice-card__header">
+                  <div class="voice-card__lead">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">20代(女性)</p>
+                      <p class="voice-card__category">ライセンス講習</p>
+                    </div>
+                    <h3 class="voice-card__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
-                  <h3 class="voice-card__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
+                  <div class="voice-card__img colorbox">
+                    <img src="./assets/images/common/voice1.jpg" alt="女性の写真">
+                  </div>
                 </div>
-                <div class="voice-card__img colorbox">
-                  <img src="./assets/images/common/voice1.jpg" alt="女性の写真">
-                </div>
+                <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
-              <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。
-              </p>
             </a>
           </li>
-          <li>
-            <a class="voice-list__item voice-card" href="#">
-              <div class="voice-card__header">
-                <div class="voice-card__lead">
-                  <div class="voice-card__meta">
-                    <p class="voice-card__age">30代(男性)</p>
-                    <p class="voice-card__category">ファンダイビング</p>
+          <li class="voice-list__item">
+            <a class="voice-card" href="#">
+              <div class="voice-card__inner">
+                <div class="voice-card__header">
+                  <div class="voice-card__lead">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">30代(男性)</p>
+                      <p class="voice-card__category">ファンダイビング</p>
+                    </div>
+                    <h3 class="voice-card__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
-                  <h3 class="voice-card__subtitle">ここにタイトルが入ります。ここにタイトル</h3>
+                  <div class="voice-card__img colorbox">
+                    <img src="./assets/images/common/voice2.jpg" alt="男性の写真">
+                  </div>
                 </div>
-                <div class="voice-card__img colorbox">
-                  <img src="./assets/images/common/voice2.jpg" alt="男性の写真">
-                </div>
+                <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>  
               </div>
-              <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。
-              </p>
             </a>
           </li>
 
@@ -498,20 +481,17 @@
     </section>
 
     <section class="price top-price">
-      <div class="price__block-img">
-        <img src="./assets/images/common/price-picture5.png" alt="サカナの絵">
-      </div>
       <div class="price__inner inner">
         <div class="price__header section-header">
           <p class="section-header__engtitle">Price</p>
           <h2 class="section-header__jatitle">料金一覧</h2>
         </div>
         <div class="price__wrapper">
-          <div class="price__image-sp  colorbox">
-            <img src="./assets/images/common/price-sp.jpg" alt="サカナの写真">
-          </div>
-          <div class="price__image-pc  colorbox">
-            <img src="./assets/images/common/price-pc.jpg" alt="サカナの写真">
+          <div class="price__image  colorbox">
+            <picture>
+              <source srcset="./assets/images/common/price-pc.jpg" alt="サカナの写真" media="(min-width: 768px)">
+              <img src="./assets/images/common/price-sp.jpg" alt="かめの写真">
+            </picture>
           </div>
           <div class="price__content">
             <div class="price__item">
@@ -587,9 +567,6 @@
     </section>
 
     <section class="contact top-contact">
-      <div class="contact__block-img">
-        <img src="./assets/images/common/contact-picture6.png" alt="サカナの絵">
-      </div>
       <div class="contact__inner inner">
         <div class="contact__content">
           <div class="contact__access">

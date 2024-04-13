@@ -111,9 +111,14 @@
   }
 }
 
-.about-us__block-img {
+
+.about-us::before {
   display: none;
   @include mq(md) {
+    content: "";
+    background-image: url("../images/common/about-picture1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     display: block;
     width: rem(194);
     height: rem(181);
@@ -124,8 +129,5 @@
   }
 }
 
-.about-us__block-img img {
-  max-width: rem(194);
-  display: inline-block;
-}
+
 

@@ -1,17 +1,5 @@
 @use "global" as *;
 
-.footer {
-  background-color: $green;
-  margin-top: rem(104);
-  padding-top: rem(48);
-  padding-bottom: rem(58);
-  @include mq(md) {
-      margin-top: rem(160);
-      padding-top: rem(80);
-      padding-bottom: rem(80);
-  }
-}
-
 .footer__inner.inner {
   padding-right: rem(0);
   @include mq(md) {

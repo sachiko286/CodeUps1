@@ -10,7 +10,10 @@
   background-color: rgba(13, 41, 54, 0.68);
   @include mq("md") {
       height: rem(90);
-  }
+    }
   }
 
-
+  .top-header.is-color {
+    background-color:$green;
+    
+  }

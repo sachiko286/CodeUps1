@@ -8,6 +8,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             $(this).toggleClass("is-open");//ボタンの開閉
             $(".js-drawer").fadeToggle();//ドロワーメニュをフェードイン、フェードアウト
             $('body').toggleClass('header__drawer-noscroll'); // 背景スクロール固定設定、解除
+            $(".top-header").toggleClass("is-color");//ヘッダーの色を変える
+
         });
 
         // backgroundまたはページ内リンクをクリックでドロワーメニュが閉じる
@@ -25,7 +27,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         function closeDrawer() {
             $(".js-drawer").fadeOut();//ドロワーメニューをフェードアウト
             $(".js-hamburger").removeClass("is-open");//ボタンからクラス名「is-open」を取る
-            $('body').removeClass('header__drawer-noscroll');//背景スクロール解除  
+            $('body').removeClass('header__drawer-noscroll');//背景スクロール解除 
+            $(".top-header").removeClass("is-color");//ヘッダーの色を戻す
         }
 
     // });

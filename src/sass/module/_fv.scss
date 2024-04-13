@@ -1,3 +1,4 @@
+
 @use "global" as *;
 
 
@@ -34,55 +35,33 @@
       position: relative;
       top: rem(4);
   }
-  
-
 }
 
 
-.fv__sp-slide {
+.fv__slide {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  @include mq(md) {
-      display: none;
-  }
-}
-
-.fv__pc-slide {
-  display: none;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  @include mq(md) {
-      display: block;
-  }
 }
 
 
-.fv__sp-swiper,
-.fv__sp-swiper .swiper-img,
-.fv__sp-swiper .swiper-img img,
-.fv__pc-swiper,
-.fv__pc-swiper .swiper-img,
-.fv__pc-swiper .swiper-img img {
+.fv__swiper,
+.fv__swiper .swiper-img,
+.fv__swiper .swiper-img img {
     height: inherit;
     min-height: inherit;
 }
 
-.fv__sp-swiper .swiper-img img,
-.fv__pc-swiper .swiper-img img {
+.fv__swiper .swiper-img img {
   width: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
-.fv__sp-swiper .swiper-slide.swiper-slide-active .swiper-img,
-.fv__sp-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
-.fv__sp-swiper .swiper-slide.swiper-slide-prev .swiper-img, 
-.fv__pc-swiper .swiper-slide.swiper-slide-active .swiper-img,
-.fv__pc-swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
-.fv__pc-swiper .swiper-slide.swiper-slide-prev .swiper-img {
+.fv__swiper .swiper-slide.swiper-slide-active .swiper-img,
+.fv__swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.fv__swiper .swiper-slide.swiper-slide-prev .swiper-img {
     animation: scale 8s linear 0s normal both;
 }
 
@@ -95,3 +74,6 @@
         transform: scale(1.2);
     }
 }
+
+
+

@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.campaign__swiper {
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.campaign__button {
+  text-align: center;
+  margin-top: rem(30);
+  padding-bottom: rem(4);
+  // position: relative;
+  // right: rem(2);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}
+
+.campaign {
+
+  .swiper-container {
+    position: relative;
+  }
+
+  .swiper {
+    position: relative;
+    margin-right: calc(50% - 50vw)
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    
+    
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+      @include mq(md) {
+        width: rem(80);
+        height: rem(80);
+        top: rem(-105);
+        margin-top: rem(0);
+        transition: .3s;
+    
+      }
+  }
+
+  .swiper-button-prev {
+    left: 77.8%;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+      content: "";
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      @include mq(md) {
+          display: block;
+      }
+  }
+
+  .swiper-button-prev::after {
+      background-image: url(/assets/images/common/btn-prev.svg);
+  }
+
+  .swiper-button-next::after {
+      background-image: url(/assets/images/common/btn-next.svg);
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: 0.6;
+  }
+
+}
