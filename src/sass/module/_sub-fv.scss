@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.sub-fv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(460);
+  background-image: url(../images/common/sub-fv-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mq(md){
+      height: rem(548);
+      background-image: url(../images/common/sub-fv-pc.jpg);
+  }
+}
+
+.sub-fv__title {
+  font-size: rem(40);
+  color: $white;
+  letter-spacing: -0.05em;
+  @include mq(md) {
+      font-size: rem(80);
+      padding-top: rem(100)
+  }
+}
+

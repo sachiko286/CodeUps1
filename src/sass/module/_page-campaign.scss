@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.page-campaign__inner {
+  max-width: rem(580);
+}
+.page-campaign__filter-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(16) rem(21);
+  position: relative;
+  z-index: 1;
+  @include mq(md) {
+    grid-template-columns: repeat(4, #{rem(162)});
+    gap: rem(0) rem(32)
+
+  }
+}
+.page-campaign__filter-list-title {
+  height: rem(34);
+  text-align: center;
+  border: 1px solid $green;
+  padding: rem(6) 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: $green;
+  background-color: #fff ;
+  font-size: rem(14);
+}
+
+.page-campaign__filter-list-title  span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.page-campaign__filter-list-title.is-active {
+  background: $green;
+  color: #fff;
+}
+.page-campaign__filter-items {
+  margin-top: rem(40);
+  padding: 0 rem(32.5);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq(md) {
+      padding: 0;
+      grid-template-columns: 1fr 1fr;
+      row-gap: rem(80);
+  }
+}
+
+.page-campaign__filter-item{
+  // max-width: rem(280);
+  width: 100%;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  height: auto;
+  @include mq(md) {
+    max-width: rem(520);
+  }
+}
+
+.page-campaign__wrapper {
+  padding: 0 rem(24) rem(40);
+  @include mq(md) {
+  }
+}
+
+.page-campaign__text {
+  flex-grow: 1;
+}
+
+.page-campaign__date {
+  margin-top: rem(30);
+  font-family: $font-family-la;
+  font-weight: $bold;
+  text-align: center;
+  color: $green;
+}
+
+.page-campaign__info-text {
+  margin-top: rem(3);
+  font-size: rem(14);
+  text-align: center;
+  color: $green;
+}
+
+.page-campaign__info-button {
+  margin-top: rem(17);
+  text-align: center;
+}
+
+// .page-campaign--title {
+//   @include mq(md) {
+//       font-size: rem(24);
+//   }
+// }
+
+.page-campaign .campaign-card__title {
+    @include mq(md) {
+      font-size: rem(24);
+      flex-grow: 0;
+      padding-bottom: rem(4);
+  }
+}
+
+.page-campaign .campaign-card__body {
+  @include mq(md) {
+    padding: rem(24) rem(24) rem(20);
+    flex: 0;
+  }
+}
+
+.page-campaign .campaign-card__text {
+  margin-top: rem(7);
+@include mq(md) {
+    margin-top: rem(20);
+}
+}
+
+.page-campaign .campaign-card__price {
+  @include mq(md) {
+      margin-top: rem(0);
+  }
+}
+
+
+.page-campaign .campaign-card__price-discount {
+  @include mq(md) {
+    margin-left: rem(40); 
+  }
+}

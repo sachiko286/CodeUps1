@@ -67,8 +67,8 @@
   margin-top: rem(4);
   font-family: $font-family-la;
   @include mq(md) {
-      justify-content: flex-start;
-      margin-left: rem(20);
+      // justify-content: flex-start;
+      // margin-left: rem(20);
       margin-top: rem(3);
   }
 
