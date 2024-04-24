@@ -172,6 +172,31 @@ $(function () {
     });
     });
 
+    // モーダル
+    let scrollPos;
+
+    $(".js-photo").click(function () {
+    let windowWidth = $(window).width();
+
+    // スマホサイズでない場合のみモーダルウィンドウを表示
+    if (windowWidth > 767) {
+    scrollPos = $(window).scrollTop();
+    $(".js-overlay").html($(this).prop("outerHTML"));
+    $(".js-overlay").fadeIn(200);
+    $('html').addClass('is-fixed');
+    }
+    return false;
+    });
+
+    $(".js-overlay").click(function () {
+    $(".js-overlay").fadeOut(200, function () {
+        $('html').removeClass('is-fixed');
+        $(window).scrollTop(scrollPos);
+    });
+    return false;
+    });
+
+
 
 
 });

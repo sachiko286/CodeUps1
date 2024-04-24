@@ -146,15 +146,7 @@
   }
 }
 
-.contact__block-img img {
-  min-width: rem(109);
-  aspect-ratio: 109 / 51;
-  display: inline-block;
-  @include mq(md) {
-    max-width: rem(301);
-    aspect-ratio: 301 / 144;
-  }
-}
+
 
 .contact__text address {
 font-style: normal;

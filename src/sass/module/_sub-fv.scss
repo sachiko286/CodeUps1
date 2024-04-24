@@ -5,13 +5,34 @@
   align-items: center;
   justify-content: center;
   height: rem(460);
-  background-image: url(../images/common/sub-fv-sp.jpg);
+  // background-image: url(../images/common/sub-fv-sp.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   @include mq(md){
       height: rem(548);
-      background-image: url(../images/common/sub-fv-pc.jpg);
+      // background-image: url(../images/common/sub-fv-pc.jpg);
+  }
+}
+
+.sub-fv--campaign {
+  background-image: url(../images/common/sub-fv-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-pc.jpg);
+  }
+}
+
+.sub-fv--about {
+  background-image: url(../images/common/sub-fv-aboutus-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-aboutus-pc.jpg);
+  }
+}
+
+.sub-fv--information {
+  background-image: url(../images/common/sub-fv-info-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-info-pc.jpg);
   }
 }
 
@@ -19,6 +40,7 @@
   font-size: rem(40);
   color: $white;
   letter-spacing: -0.05em;
+  font-weight: $regular;
   @include mq(md) {
       font-size: rem(80);
       padding-top: rem(100)
