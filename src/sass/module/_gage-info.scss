@@ -1,0 +1,148 @@
+@use "global" as *;
+
+.page-infomation__inner {
+  max-width: rem(580);
+}
+
+.tab {
+  margin-top: rem(150);
+}
+
+.tab__menu {
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    justify-content: space-between;
+  }
+}
+
+.tab__menu-item {
+  padding: rem(10);
+  min-width: rem(102);
+  width: 100%;
+  font-size: rem(14);
+  color: $green;
+  // border: 1px solid #73B2C8;
+  background-color: $lightgreen;
+  text-align: center;
+  cursor: pointer;
+  @include mq(md){
+      font-size: rem(24);
+      max-width: rem(300);
+      padding: rem(13) 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+.tab__menu-item::before {
+  @include mq(md) {
+    content: "";
+    -webkit-mask-image: url("../images/common/info-tab.svg") no-repeat center center / contain;
+    mask-image: url("../images/common/info-tab.svg");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size:  contain;
+    width: rem(64);
+    height: rem(64);
+    background-color: $green;
+    margin-right: rem(8);
+    
+  }
+}
+
+.tab__menu-item:nth-child(2)::before {
+  -webkit-mask-image: url("../images/common/info-tab-fundiving.svg") no-repeat center center / contain;
+  mask-image: url("../images/common/info-tab-fundiving.svg");
+}
+
+.tab__menu-item:nth-child(3)::before {
+  -webkit-mask-image: url("../images/common/info-tab-diving.svg") no-repeat center center / contain;
+  mask-image: url("../images/common/info-tab-diving.svg");
+}
+
+
+
+
+
+
+
+.tab__menu-item + .tab__menu-item {
+  margin-left: rem(20);
+}
+
+.tab__menu-item.is-active {
+  color: #fff;
+  background-color: $green;
+}
+
+.tab__menu-item.is-active::before {
+  background-color: #fff;
+}
+
+
+
+.tab__content {
+  margin-top: rem(20);
+}
+
+.tab__content-item {
+  padding: rem(24);
+  display: none;
+  background-color: #fff;
+  border: 1px solid $green;
+  @include mq(md) {
+  }
+}
+
+.tab__content-item.is-active {
+  display: block;
+  animation: fade .3s;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.tab__content-title {
+  font-size: rem(24);
+  font-weight: $bold;
+  padding-bottom: rem(8);
+  border-bottom: 1px solid $green;
+}
+
+.tab__content-text {
+  font-size: rem(16);
+  padding: rem(8) 0;
+}
+
+.tab__content-img {
+  width: 100%;
+  min-width: rem(297);
+  @include mq(md) {
+    min-width: rem(492);
+    margin-left: rem(40);
+  }
+}
+
+.tab__content-img img {
+  object-fit: cover;
+  aspect-ratio: 297 / 189;
+  @include mq(md) {
+    aspect-ratio: 492 / 313;
+  }
+}
+
+.tab__content-wrapper {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+

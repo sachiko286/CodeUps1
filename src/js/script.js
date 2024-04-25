@@ -198,5 +198,18 @@ $(function () {
 
 
 
+    // タブ切り替え２
+    $('.js-tab-menu').on('click', function () {
+        $('.js-tab-menu').removeClass('is-active');
+        // $('.tab01-img').removeClass('is-active');
+        $('.js-tab-content').removeClass('is-active');
+        $(this).addClass('is-active');
+        // $('.tab01-img').addClass('is-active');
+        var number = $(this).data("number");
+        $('#' + number).addClass('is-active');
+    });
+
+
+
 
 });
