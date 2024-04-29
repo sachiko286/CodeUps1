@@ -142,8 +142,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 //タブきりかえ
 $(function () {
     // 変数を要素をセット
-    var $filter = $('.page-campaign__filter-list [data-filter]'),
-        $item = $('.page-campaign__filter-items [data-item]');
+    var $filter = $('.filter-content__list [data-filter]'),
+        $item = $('.filter-content__items [data-item]');
         
     // カテゴリをクリックしたら
     $filter.click(function (e) {

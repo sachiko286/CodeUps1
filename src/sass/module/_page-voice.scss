@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.page-voice__inner {
+  max-width: rem(580);
+}
+
+.page-voice .filter-content__items {
+  padding: 0;
+}
