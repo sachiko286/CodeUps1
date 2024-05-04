@@ -1,0 +1,101 @@
+@use "global" as *;
+
+
+.top-page-price {
+  margin-top: rem(52);
+  @include mq(md) {
+      margin-top: rem(150);
+  }
+}
+
+.page-price__inner {
+  max-width: rem(580);
+}
+
+.page-price__table {
+  border-collapse: collapse;
+  width: 100%;
+  @include mq(md) {
+      max-width: rem(700);
+      margin-inline: auto;
+  }
+  
+}
+
+.page-price__table th,
+.page-price__table td {
+  border: 1px solid $green;
+}
+
+.page-price__table-col {
+  background-color: $green;
+  color: #fff;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.page-price__table-row {
+  display: none;
+  @include mq(md) {
+      display: table-cell;
+      width: rem(200);
+      background-color: $green;
+      color: #fff;
+    
+  }
+}
+
+
+.page-price__table-col::before {
+  content: "";
+  background-image: url("../images/common/price-icon.svg");
+  background-size: contain;
+  display: inline-block;
+  width: rem(24);
+  height: rem(24);
+  margin-bottom: rem(-5);
+  margin-right: rem(8);
+  // margin-inline: auto;
+}
+
+.page-price__table-row::after {
+  content: "";
+  background-image: url("../images/common/price-icon.svg");
+  background-size: contain;
+  display: block;
+  width: rem(64);
+  height: rem(64);
+  margin-inline: auto;
+}
+
+.page-price__table-course {
+  // width: 50%;
+  width: calc(240 / 345)* 100%;
+  text-align: center;
+  height: rem(60);
+  @include mq(md) {
+      width: rem(340);
+      text-align: start;
+      padding-left: rem(16);
+  }
+}
+
+.page-price__table-fee {
+  // width: 30%;
+  width: calc(100% - (240 / 345)* 100%);
+  text-align: end;
+  padding-right: rem(16);
+  @include mq(md) {
+      width: rem(162);
+  }
+}
+
+.page-price__table + .page-price__table {
+  margin-top: rem(40);
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}
