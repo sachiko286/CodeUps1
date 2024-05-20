@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.page-404__inner {
+@include mq(md) {
+    max-width: rem(850);
+}
+} 
+
+.top-page-404{
+  padding-top: rem(60);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(135);
+    padding-bottom: rem(152);
+  }
+}
+
+.page-404 {
+  color: #fff;
+  background-color: $green;
+  background-image: url("../images/common/404back.png");
+  background-repeat: no-repeat;
+  background-size: rem(345);
+  background-position: 50% 140%;
+  text-align: center;
+  @include mq(md) {
+      background-size: rem(698);
+      background-position: 24.5% 94%;
+      
+  }
+}
+
+.page-404__title {
+  font-size: rem(80);
+  font-family: $font-family-la;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  line-height: 1;
+  @include mq(md) {
+      font-size: rem(160);
+  }
+}
+
+.page-404__text {
+  margin-top: rem(2);
+  @include mq(md) {
+      margin-top: rem(38);
+  }
+}
+
+.page-404__button {
+  margin-top: rem(40);
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}

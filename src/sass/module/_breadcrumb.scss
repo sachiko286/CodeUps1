@@ -3,31 +3,67 @@
 
 .breadcrumb {
   position: relative;
+  margin-top: rem(8);
 }
 
+.breadcrumb--404 {
+  padding-top: rem(88);
+  margin-top: rem(0);
+  background-color: $green;
+  color: #fff;
+  @include mq(md) {
+      padding-top: rem(98);
+  }
+}
 
 .breadcrumb__list {
   display: flex;
-  margin-top: rem(8);
+  // margin-top: rem(8);
   // position: relative;
 }
 
 .breadcrumb__list-item {
   font-size: rem(14);
   margin-right: rem(8);
- 
-
 }
+
+// .breadcrumb__list-item:not(:last-child)::after {
+//   content: "";
+//   display: inline-block;
+//   width: rem(4);
+//   height: rem(8);
+//   background-image: url(../images/common/breadcrumb.svg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin-left: rem(8);
+// }
 
 .breadcrumb__list-item:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: rem(4);
   height: rem(8);
-  background-image: url(../images/common/breadcrumb.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/breadcrumb.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: #000;
   margin-left: rem(8);
+  @include mq(md) {
+      width: rem(6);
+      height: rem(10);
+  }
+}
+
+.breadcrumb--404 .breadcrumb__list-item:not(:last-child)::after {
+  // content: "";
+  // display: inline-block;
+  // width: rem(4);
+  // height: rem(8);
+  // mask-image: url(../images/common/breadcrumb.svg);
+  // mask-repeat: no-repeat;
+  // mask-size: cover;
+  background-color: #fff;
+  // margin-left: rem(8);
 }
 
 .breadcrumb::after{
@@ -50,3 +86,6 @@
   }
 }
 
+.breadcrumb-404::after {
+  display: none;
+}

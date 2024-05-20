@@ -50,14 +50,51 @@
   }
 }
 
+
+.sub-fv--faq {
+  background-image: url(../images/common/sub-fv-faq-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-faq-pc.jpg);
+  }
+}
+
+.sub-fv--sitemap{
+  background-image: url(../images/common/sub-fv-sitemap-etc-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-sitemap-etc-pc.jpg);
+  }
+}
+
+.sub-fv--contact {
+  background-image: url(../images/common/sub-fv-contact-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-contact-pc.jpg);
+  }
+}
+
+
+
+.sub-fv--price .sub-fv__title {
+  @include mq(md) {
+    letter-spacing: -0.02em;
+
+  }
+}
+
 .sub-fv__title {
   font-size: rem(40);
   color: $white;
   letter-spacing: -0.05em;
   font-weight: $regular;
+  font-family: $font-family-la;
   @include mq(md) {
       font-size: rem(80);
-      padding-top: rem(100)
+      padding-top: rem(100);
+      letter-spacing: 0;
   }
+}
+
+.sub-fv__title--contact {
+  letter-spacing: 0;
 }
 

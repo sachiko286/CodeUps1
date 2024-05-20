@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.top-page-thanks {
+  margin-top: rem(52);
+  @include mq(md) {
+      margin-top: rem(150);
+  }
+}
+
+.page-thanks__inner {
+  max-width: rem(580);
+  width: 100%;
+  text-align: center;
+  @include mq(md) {
+      max-width: rem(750);
+  }
+}
+
+.page-thanks__sub-text {
+  margin-top: rem(40);
+}
+
+

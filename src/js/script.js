@@ -172,6 +172,8 @@ $(function () {
     });
     });
 
+
+
     // モーダル
     let scrollPos;
 
@@ -208,6 +210,14 @@ $(function () {
         var number = $(this).data("number");
         $('#' + number).addClass('is-active');
     });
+
+
+    //アコーディオン
+    $('.js-faq-question').on('click', function () {
+        $(this).next().slideToggle(300);
+        $(this).toggleClass('is-open');
+    });
+
 
 
 

@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .top-footer {
-  background-color: $green;
   margin-top: rem(104);
   padding-top: rem(48);
   padding-bottom: rem(58);
@@ -12,3 +11,25 @@
   }
 }
 
+.top-footer--404 {
+  padding-top: rem(52);
+  padding-bottom: rem(58);
+  @include mq(md) {
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+  }
+}
+
+.top-footer--contact {
+  margin-top: rem(148);
+  @include mq(md) {
+      margin-top: rem(164);
+  }
+}
+
+.top-footer--thanks {
+  margin-top: rem(144);
+  @include mq(md) {
+      margin-top: rem(120);
+  }
+}

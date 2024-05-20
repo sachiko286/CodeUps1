@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.footer {
+  background-color: $green;
+}
+
 .footer__inner.inner {
   padding-right: rem(0);
   @include mq(md) {
