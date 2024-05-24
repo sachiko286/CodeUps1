@@ -72,6 +72,13 @@
   }
 }
 
+.sub-fv--blog {
+  background-image: url(../images/common/sub-fv-blog-sp.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/sub-fv-blog-pc.jpg);
+  }
+}
+
 
 
 .sub-fv--price .sub-fv__title {

@@ -137,89 +137,130 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             });
         });
 
-    });
+    // });
 
-//タブきりかえ
-$(function () {
-    // 変数を要素をセット
-    var $filter = $('.filter-content__list [data-filter]'),
-        $item = $('.filter-content__items [data-item]');
-        
-    // カテゴリをクリックしたら
-    $filter.click(function (e) {
-        // デフォルトの動作をキャンセル
-        e.preventDefault();
-        var $this = $(this);
-        
-        // クリックしたカテゴリにクラスを付与
-        $filter.removeClass('is-active');
-        $this.addClass('is-active');
-        
-        // クリックした要素のdata属性を取得
-        var $filterItem = $this.attr('data-filter');
-        
-        // データ属性が all なら全ての要素を表示
-        if ($filterItem == 'all') {
-        $item.removeClass('is-active').fadeOut().promise().done(function () {
-            $item.addClass('is-active').fadeIn();
-        });
-        // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
-        } else {
-        $item.removeClass('is-active').fadeOut().promise().done(function () {
-            $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn();
-        });
+
+
+        // モーダル
+        let scrollPos;
+
+        $(".js-photo").click(function () {
+        let windowWidth = $(window).width();
+
+        // スマホサイズでない場合のみモーダルウィンドウを表示
+        if (windowWidth > 767) {
+        scrollPos = $(window).scrollTop();
+        $(".js-overlay").html($(this).prop("outerHTML"));
+        $(".js-overlay").fadeIn(200);
+        $('html').addClass('is-fixed');
         }
+        return false;
+        });
+
+        $(".js-overlay").click(function () {
+        $(".js-overlay").fadeOut(200, function () {
+            $('html').removeClass('is-fixed');
+            $(window).scrollTop(scrollPos);
+        });
+        return false;
+        });
+
+
+
+        //アコーディオンfqa
+        $('.js-faq-question').on('click', function () {
+            $(this).next().slideToggle(300);
+            $(this).toggleClass('is-open');
+        });
+
+        //アコーディオンarchive
+        $('.js-archive').on('click', function () {
+            $(this).next('.js-mouths').slideToggle(300);
+            $(this).toggleClass('is-open');
+        });
+
+        //別ページから特定のフィルターがかかった状態へリンク
+        //フィルター、タブ切り替え
+        $(document).ready(function () {
+            // 変数を要素をセット
+            var $filter = $('.filter-content__list [data-filter]'),
+                $item = $('.filter-content__items [data-item]'),
+                $tabMenu = $('.js-tab-menu'),          // タブメニュー要素の定義
+                $tabContent = $('.js-tab-content');    // タブコンテンツ要素の定義
+        
+            // URLのパラメータを取得する関数
+            function getParameterByName(name) {
+                var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+                return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+            }
+        
+            // フィルターパラメータを取得
+            var filter = getParameterByName('filter');
+        
+            if (filter) {
+                // フィルターを適用
+                $filter.removeClass('is-active');
+                $filter.filter('[data-filter="' + filter + '"]').addClass('is-active');
+        
+                $item.removeClass('is-active').fadeOut().promise().done(function () {
+                    if (filter === 'all') {
+                        $item.addClass('is-active').fadeIn();
+                    } else {
+                        $item.filter('[data-item="' + filter + '"]').addClass('is-active').fadeIn();
+                    }
+                });
+            }
+
+
+            //フィルター切り替え
+                // カテゴリをクリックしたら
+            $filter.click(function (e) {
+                // デフォルトの動作をキャンセル
+                e.preventDefault();
+                var $this = $(this);
+        
+                // クリックしたカテゴリにクラスを付与
+                $filter.removeClass('is-active');
+                $this.addClass('is-active');
+        
+                // クリックした要素のdata属性を取得
+                var $filterItem = $this.attr('data-filter');
+        
+                // データ属性が all なら全ての要素を表示
+                if ($filterItem === 'all') {
+                    $item.removeClass('is-active').fadeOut().promise().done(function () {
+                        $item.addClass('is-active').fadeIn();
+                    });
+                // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+                    } else {
+                    $item.removeClass('is-active').fadeOut().promise().done(function () {
+                        $item.filter('[data-item="' + $filterItem + '"]').addClass('is-active').fadeIn();
+                    });
+                }
+            });
+        
+            // タブ切り替え
+            $tabMenu.on('click', function () {
+                $tabMenu.removeClass('is-active');
+                $tabContent.removeClass('is-active');
+                $(this).addClass('is-active');
+                var number = $(this).data("number");
+                $('#' + number).addClass('is-active');
+            });
+        
+            // タブのURLパラメータを取得
+            var tab = getParameterByName('tab');
+                if (tab) {
+                    // タブを切り替え
+                    $tabMenu.removeClass('is-active');
+                    $tabContent.removeClass('is-active');
+                    $tabMenu.filter('[data-number="' + tab + '"]').addClass('is-active');
+                    $('#' + tab).addClass('is-active');
+                }
+        });
+    
+
+
     });
-    });
-
-
-
-    // モーダル
-    let scrollPos;
-
-    $(".js-photo").click(function () {
-    let windowWidth = $(window).width();
-
-    // スマホサイズでない場合のみモーダルウィンドウを表示
-    if (windowWidth > 767) {
-    scrollPos = $(window).scrollTop();
-    $(".js-overlay").html($(this).prop("outerHTML"));
-    $(".js-overlay").fadeIn(200);
-    $('html').addClass('is-fixed');
-    }
-    return false;
-    });
-
-    $(".js-overlay").click(function () {
-    $(".js-overlay").fadeOut(200, function () {
-        $('html').removeClass('is-fixed');
-        $(window).scrollTop(scrollPos);
-    });
-    return false;
-    });
-
-
-
-    // タブ切り替え２
-    $('.js-tab-menu').on('click', function () {
-        $('.js-tab-menu').removeClass('is-active');
-        // $('.tab01-img').removeClass('is-active');
-        $('.js-tab-content').removeClass('is-active');
-        $(this).addClass('is-active');
-        // $('.tab01-img').addClass('is-active');
-        var number = $(this).data("number");
-        $('#' + number).addClass('is-active');
-    });
-
-
-    //アコーディオン
-    $('.js-faq-question').on('click', function () {
-        $(this).next().slideToggle(300);
-        $(this).toggleClass('is-open');
-    });
-
-
-
-
-
 });
+

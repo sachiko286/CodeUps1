@@ -12,6 +12,11 @@
   }
 }
 
+.blog-list--2 {
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 
 .blog-list__item {
