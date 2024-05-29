@@ -183,10 +183,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         //フィルター、タブ切り替え
         $(document).ready(function () {
             // 変数を要素をセット
-            var $filter = $('.filter-content__list [data-filter]'),
-                $item = $('.filter-content__items [data-item]'),
-                $tabMenu = $('.js-tab-menu'),          // タブメニュー要素の定義
-                $tabContent = $('.js-tab-content');    // タブコンテンツ要素の定義
+            // var $filter = $('.filter-content__list [data-filter]');
+            // var    $item = $('.filter-content__items [data-item]');
+            var    $tabMenu = $('.js-tab-menu');         // タブメニュー要素の定義
+            var    $tabContent = $('.js-tab-content');    // タブコンテンツ要素の定義
         
             // URLのパラメータを取得する関数
             function getParameterByName(name) {
@@ -194,50 +194,50 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                 return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
             }
         
-            // フィルターパラメータを取得
-            var filter = getParameterByName('filter');
+            // // フィルターパラメータを取得
+            // var filter = getParameterByName('filter');
         
-            if (filter) {
-                // フィルターを適用
-                $filter.removeClass('is-active');
-                $filter.filter('[data-filter="' + filter + '"]').addClass('is-active');
+            // if (filter) {
+            //     // フィルターを適用
+            //     $filter.removeClass('is-active');
+            //     $filter.filter('[data-filter="' + filter + '"]').addClass('is-active');
         
-                $item.removeClass('is-active').fadeOut().promise().done(function () {
-                    if (filter === 'all') {
-                        $item.addClass('is-active').fadeIn();
-                    } else {
-                        $item.filter('[data-item="' + filter + '"]').addClass('is-active').fadeIn();
-                    }
-                });
-            }
+            //     $item.removeClass('is-active').fadeOut().promise().done(function () {
+            //         if (filter === 'all') {
+            //             $item.addClass('is-active').fadeIn();
+            //         } else {
+            //             $item.filter('[data-item="' + filter + '"]').addClass('is-active').fadeIn();
+            //         }
+            //     });
+            // }
 
 
-            //フィルター切り替え
-                // カテゴリをクリックしたら
-            $filter.click(function (e) {
-                // デフォルトの動作をキャンセル
-                e.preventDefault();
-                var $this = $(this);
+            // //フィルター切り替え
+            //     // カテゴリをクリックしたら
+            // $filter.click(function (e) {
+            //     // デフォルトの動作をキャンセル
+            //     e.preventDefault();
+            //     var $this = $(this);
         
-                // クリックしたカテゴリにクラスを付与
-                $filter.removeClass('is-active');
-                $this.addClass('is-active');
+            //     // クリックしたカテゴリにクラスを付与
+            //     $filter.removeClass('is-active');
+            //     $this.addClass('is-active');
         
-                // クリックした要素のdata属性を取得
-                var $filterItem = $this.attr('data-filter');
+            //     // クリックした要素のdata属性を取得
+            //     var $filterItem = $this.attr('data-filter');
         
-                // データ属性が all なら全ての要素を表示
-                if ($filterItem === 'all') {
-                    $item.removeClass('is-active').fadeOut().promise().done(function () {
-                        $item.addClass('is-active').fadeIn();
-                    });
-                // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
-                    } else {
-                    $item.removeClass('is-active').fadeOut().promise().done(function () {
-                        $item.filter('[data-item="' + $filterItem + '"]').addClass('is-active').fadeIn();
-                    });
-                }
-            });
+            //     // データ属性が all なら全ての要素を表示
+            //     if ($filterItem === 'all') {
+            //         $item.removeClass('is-active').fadeOut().promise().done(function () {
+            //             $item.addClass('is-active').fadeIn();
+            //         });
+            //     // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+            //         } else {
+            //         $item.removeClass('is-active').fadeOut().promise().done(function () {
+            //             $item.filter('[data-item="' + $filterItem + '"]').addClass('is-active').fadeIn();
+            //         });
+            //     }
+            // });
         
             // タブ切り替え
             $tabMenu.on('click', function () {
@@ -258,6 +258,76 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                     $('#' + tab).addClass('is-active');
                 }
         });
+
+
+
+        //フォームエラーチェック、送信
+        $(document).ready(function() {
+            $('#js-submit').click(function(event) {
+              event.preventDefault(); // フォームの送信を防止
+        
+            // 必須フィールドを取得
+            var nameField = $('#name');
+            var mailField = $('#mail');
+            var phoneField = $('#phone');
+            var categoryFields = $('input[name="category"]');
+            var messageField = $('textarea[name="message"]');
+            var privacyCheck = $('#privacyCheck');
+        
+            // エラーメッセージを非表示にする
+            var errorElement = $('.form__error');
+            errorElement.hide();
+        
+            // 入力フィールドのエラースタイルをリセット
+            resetErrorStyles();
+        
+            // バリデーションフラグ
+            var isValid = true;
+        
+            // バリデーションチェック
+            if (!nameField.val().trim()) {
+                setErrorStyle(nameField.closest('.form-input'));
+                isValid = false;
+            }
+            if (!mailField.val().trim()) {
+                setErrorStyle(mailField.closest('.form-input'));
+                isValid = false;
+            }
+            if (!phoneField.val().trim()) {
+                setErrorStyle(phoneField.closest('.form-input'));
+                isValid = false;
+            }
+            if (!categoryFields.is(':checked')) {
+                setErrorStyle(categoryFields.closest('.form-radio'));
+                isValid = false;
+            }
+            if (!messageField.val().trim()) {
+                setErrorStyle(messageField.closest('.form-textarea'));
+                isValid = false;
+            }
+            if (!privacyCheck.is(':checked')) {
+                setErrorStyle(privacyCheck.closest('.form__privacyCheck-wrapper'));
+                isValid = false;
+            }
+        
+            // エラーがあればエラーメッセージを表示
+            if (!isValid) {
+                errorElement.show();
+            } else {
+                // フォームを送信する処理をここに追加
+                window.location.href = 'page-thanks.html';
+            }
+            });
+        
+            function setErrorStyle(element) {
+            element.addClass('error');
+            }
+        
+            function resetErrorStyles() {
+            $('.form-input.error, .form-textarea.error, .form-radio.error, .form__privacyCheck-wrapper.error').removeClass('error');
+            }
+        });
+                    
     
 
 

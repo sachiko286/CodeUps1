@@ -15,7 +15,29 @@
   }
 }
 
+.form__error {
+  display: none;
+  font-size: rem(14);
+  color: #C94800;
+  text-align: center;
+}
 
+.form-input.error input,
+.form-textarea.error textarea,
+.form-radio.error input {
+  border: 2px solid red;
+  background-color: #ffcccc; /* ピンクの塗りつぶし */
+}
+
+.form-radio.error input + span::before,
+.form__privacyCheck-wrapper.error input + span::before {
+  border: 2px solid red;
+  background-color: #ffcccc; /* ピンクの塗りつぶし */
+}
+
+.form__wrap:first-of-type {
+  margin-top: 40px; 
+}
 
 .form__wrap {
   padding-bottom: rem(24);

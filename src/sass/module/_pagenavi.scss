@@ -6,17 +6,33 @@
       padding-bottom: rem(3);
   }
 }
+
+.pagenavi--sub-blog {
+  margin-top: rem(40);
+  @include mq(md) {
+      margin-top: rem(80);
+  }
+}
+
 .pagenavi__inner {
   margin: auto;
   max-width: rem(580);
   width: 100%;
 }
 
-.pagenavi .wp-pagenavi {
+.pagenavi__inner--sub-blog {
+  max-width: rem(158);
+}
+
+.wp-pagenavi {
 display: flex;
 clear: both;
 text-align: center;
 justify-content: center;
+}
+
+.wp-pagenavi--sub-blog {
+  justify-content: space-between;
 }
 
 .pagenavi__numbers {
