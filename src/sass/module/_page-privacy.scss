@@ -1,17 +1,10 @@
 @use "global" as *;
 
 .page-privacy__inner {
-@include mq(md) {
-    max-width: rem(850);
-}
-} 
-
-.top-page-privacy{
-  margin-top: rem(52);
   @include mq(md) {
-      margin-top: rem(150);
+      max-width: rem(850);
   }
-}
+} 
 
 .page-privacy__lists {
 // list-style: auto;

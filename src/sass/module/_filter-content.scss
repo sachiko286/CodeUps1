@@ -30,6 +30,11 @@
   justify-content: center;
   height: 100%;
 }
+.filter-content__list-title:hover {
+  background: $green;
+  color: #fff;
+}
+
 .filter-content__list-title.is-active {
   background: $green;
   color: #fff;
@@ -45,6 +50,10 @@
       grid-template-columns: 1fr 1fr;
       row-gap: rem(80);
   }
+}
+
+.filter-content__items--page-voice {
+  padding: 0;
 }
 
 .filter-content__item{

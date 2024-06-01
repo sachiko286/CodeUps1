@@ -12,10 +12,10 @@
   }
 }
 
-.blog-list--2 {
+.blog-list--page {
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: rem(82);
+    row-gap: rem(81);
   }
 }
 

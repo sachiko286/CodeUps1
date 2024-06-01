@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.aside-archive__item {
+  font-size: rem(24);
+  color: $green;
+}
+
+.aside-archive__item-year {
+  cursor: pointer;
+  padding-left: rem(28);
+}
+.aside-archive__item-mouths {
+  display: none;
+  margin-left: rem(25);
+  margin-top: rem(2);
+}
+
+.aside-archive__item-mouth {
+  padding-left: rem(26);
+}
+
+.aside-archive__item-mouth {
+  display: block;
+}
+.aside-archive__item-mouth + .aside-archive__item-mouth{
+  margin-top: rem(4);
+}
+
+.aside-archive__item:nth-of-type(2) {
+  margin-top: rem(2);
+}

@@ -286,23 +286,23 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         
             // バリデーションチェック
             if (!nameField.val().trim()) {
-                setErrorStyle(nameField.closest('.form-input'));
+                setErrorStyle(nameField.closest('.form__input'));
                 isValid = false;
             }
             if (!mailField.val().trim()) {
-                setErrorStyle(mailField.closest('.form-input'));
+                setErrorStyle(mailField.closest('.form__input'));
                 isValid = false;
             }
             if (!phoneField.val().trim()) {
-                setErrorStyle(phoneField.closest('.form-input'));
+                setErrorStyle(phoneField.closest('.form__input'));
                 isValid = false;
             }
             if (!categoryFields.is(':checked')) {
-                setErrorStyle(categoryFields.closest('.form-radio'));
+                setErrorStyle(categoryFields.closest('.form__radio'));
                 isValid = false;
             }
             if (!messageField.val().trim()) {
-                setErrorStyle(messageField.closest('.form-textarea'));
+                setErrorStyle(messageField.closest('.form__textarea'));
                 isValid = false;
             }
             if (!privacyCheck.is(':checked')) {
@@ -324,7 +324,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             }
         
             function resetErrorStyles() {
-            $('.form-input.error, .form-textarea.error, .form-radio.error, .form__privacyCheck-wrapper.error').removeClass('error');
+            $('.form__input.error, .form__textarea.error, .form__radio.error, .form__privacyCheck-wrapper.error').removeClass('error');
             }
         });
                     

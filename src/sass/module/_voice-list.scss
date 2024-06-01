@@ -9,9 +9,11 @@
   }
 }
 
-
-.voice-list__item {
-  background-color: #333;
+.voice-list--page-voice {
+  @include mq(md) {
+    row-gap: rem(80);
+  }
 }
+
 
 

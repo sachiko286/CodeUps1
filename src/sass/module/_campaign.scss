@@ -82,3 +82,33 @@
   }
 
 }
+
+.campaign__wrapper {
+  padding: 0 rem(24) rem(40);
+  @include mq(md) {
+  }
+}
+
+.campaign__text {
+  flex-grow: 1;
+}
+
+.campaign__date {
+  margin-top: rem(30);
+  font-family: $font-family-la;
+  font-weight: $bold;
+  text-align: center;
+  color: $green;
+}
+
+.campaign__info-text {
+  margin-top: rem(3);
+  font-size: rem(14);
+  text-align: center;
+  color: $green;
+}
+
+.campaign__info-button {
+  margin-top: rem(17);
+  text-align: center;
+}

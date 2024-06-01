@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.archive-arrow {
+  position: relative;
+}
+
+.archive-arrow::before{
+	position: absolute;
+	top: rem(6);
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: rem(24);
+	height: rem(24);
+  background-image: url("../images/common/archive-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.2s;
+}
+
+.aside-archive__item-year.archive-arrow.is-open::before {
+  transform: rotate(90deg);
+  transform-origin: 25% 50% 0;
+}
+
+

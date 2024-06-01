@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.aside-voice__img {
+  aspect-ratio: 294 / 218;
+}
+
+.aside-voice__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.aside-voice__lead {
+  margin-top: rem(16);
+}
+.aside-voice__age {
+  font-size: rem(12);
+}
+.aside-voice__subtitle {
+  margin-top: rem(8);
+  font-size: rem(24);
+}
+
+.aside-voice__button {
+  text-align: center;
+  margin-top: rem(40);
+}
+
