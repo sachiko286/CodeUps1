@@ -151,11 +151,12 @@
 .form__radio input {
   /* display: none; */
   display: block;
-  height: 15px;
+  height: rem(14);
   opacity: 0;
   position: absolute;
-  width: 3px;
+  width: rem(14);
   z-index: -1;
+  margin: 0;
 }
 
 .form__radio input + span {

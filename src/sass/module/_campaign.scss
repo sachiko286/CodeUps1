@@ -86,6 +86,9 @@
 .campaign__wrapper {
   padding: 0 rem(24) rem(40);
   @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 }
 
