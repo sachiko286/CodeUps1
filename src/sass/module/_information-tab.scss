@@ -1,6 +1,8 @@
 @use "global" as *;
 
 .information-tab__menu {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   @include mq(md) {
@@ -32,6 +34,11 @@
   }
 }
 
+.information-tab__menu-item:hover {
+  background: $green;
+  color: #fff;
+}
+
 .information-tab__menu-item::before {
   @include mq(md) {
     content: "";
@@ -44,8 +51,12 @@
     height: rem(64);
     background-color: $green;
     margin-right: rem(8);
-    
+    transition: all 0.3s;
   }
+}
+
+.information-tab__menu-item:hover::before {
+  background-color: #fff;
 }
 
 .information-tab__menu-item:nth-child(2)::before {

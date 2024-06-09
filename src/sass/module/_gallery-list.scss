@@ -1,16 +1,57 @@
 @use "global" as *;
 
+// .gallery-list {
+//   display: grid;
+//   gap: rem(8);
+//   @include mq(md) {
+//     margin-top: rem(80);
+//       grid-template:
+//       "A B B" #{rem(369)}
+//       "A C C" #{rem(369)}
+//       "D D F" #{rem(369)}
+//       "E E F" #{rem(369)}
+//       / calc(492 / 1080 * 100%) calc(80 / 1080 * 100%) calc(492 / 1080 * 100%);
+//   }
+// }
+
+// .gallery-list img {
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// @include mq(md) {
+//   [data-area="A"] {
+//       grid-area: A;
+//       }
+//       [data-area="B"] {
+//       grid-area: B;
+//       }
+//       [data-area="C"] {
+//       grid-area: C;
+//       }
+//       [data-area="D"] {
+//       grid-area: D;
+//       }
+//       [data-area="E"] {
+//       grid-area: E;
+//       }
+//       [data-area="F"] {
+//           grid-area: F;
+//           }
+// }
+
 .gallery-list {
   display: grid;
-  gap: rem(8);
+  gap: rem(8); 
+
   @include mq(md) {
-    margin-top: rem(80);
-      grid-template:
-      "A B B" #{rem(369)}
-      "A C C" #{rem(369)}
-      "D D F" #{rem(369)}
-      "E E F" #{rem(369)}
-      / calc(492 / 1080 * 100%) calc(80 / 1080 * 100%) calc(492 / 1080 * 100%);
+    margin-top: rem(80); 
+
+    grid-template-columns: calc(492 / 1080 * 100%) calc(80 / 1080 * 100%) calc(492 / 1080 * 100%); // 3つのカラム、中央のカラムを細く設定
+    grid-auto-flow: dense; /* 隙間を埋めながら配置 */
+    // grid-auto-rows: minmax(#{rem(369)}, 1fr); // 行の高さを相対値で設定
+
+
   }
 }
 
@@ -20,25 +61,36 @@
 }
 
 @include mq(md) {
-  [data-area="A"] {
-      grid-area: A;
-      }
-      [data-area="B"] {
-      grid-area: B;
-      }
-      [data-area="C"] {
-      grid-area: C;
-      }
-      [data-area="D"] {
-      grid-area: D;
-      }
-      [data-area="E"] {
-      grid-area: E;
-      }
-      [data-area="F"] {
-          grid-area: F;
-          }
+  .gallery-list__item:nth-child(6n+1) {
+    grid-column: span 1; // 1番目のアイテムの位置を指定
+    grid-row: span 2; // 1番目のアイテムの行を2つ分占める
+    aspect-ratio: 492/746;
+  }
+  .gallery-list__item:nth-child(6n+2) {
+    grid-column: span 2; // 2番目のアイテムの位置を指定
+    grid-row: span 1; // 2番目のアイテムの行を1つ分占める
+    aspect-ratio: 580/369;
+  }
+  .gallery-list__item:nth-child(6n+3) {
+    grid-column: span 2; // 3番目のアイテムの位置を指定
+    grid-row: span 1; // 3番目のアイテムの行を1つ分占める
+    aspect-ratio: 580/369;
+  }
+  .gallery-list__item:nth-child(6n+4) {
+    grid-column: span 2; // 4番目のアイテムの位置を指定
+    grid-row: span 1; // 4番目のアイテムの行を1つ分占める
+    aspect-ratio: 580/369;
+    
+  }
+  .gallery-list__item:nth-child(6n+5) {
+    grid-column: span 2; // 5番目のアイテムの位置を指定
+    grid-row: span 1; // 5番目のアイテムの行を1つ分占める
+    aspect-ratio: 580/369;
+  }
+  .gallery-list__item:nth-child(6n+6) {
+    grid-column: span 1; // 6番目のアイテムの位置を指定
+    grid-row: span 2; // 6番目のアイテムの行を2つ分占める
+    aspect-ratio: 492/746;
+  }
 }
-  
-  
 

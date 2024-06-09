@@ -3,19 +3,27 @@
 
 .page-price__inner {
   max-width: rem(580);
+  @include mq(md) {
+      max-width: rem(750);
+  }
 }
 
+.page-price__content {
+  @include mq(md) {
+      display: flex;
+  }
+}
 .page-price__table {
   border-collapse: collapse;
   width: 100%;
   @include mq(md) {
       max-width: rem(700);
-      margin-inline: auto;
+      // margin-inline: auto;
   }
   
 }
 
-.page-price__table th,
+.page-price__title,
 .page-price__table td {
   border: 1px solid $green;
 }
@@ -25,24 +33,38 @@
   color: #fff;
   padding-top: rem(7);
   padding-bottom: rem(7);
+  text-align: center;
   @include mq(md) {
     display: none;
   }
 }
 
-.page-price__table-row {
-  display: none;
+.page-price__title {
+  font-weight: $bold;
+  background-color: $green;
+  color: #fff;
+  padding-top: rem(7);
+  padding-bottom: rem(7);
+  text-align: center;
+  // display: none;
   @include mq(md) {
-      display: table-cell;
-      width: rem(200);
+      display: block;
+      max-width: rem(200);
+      width: 100%;
       background-color: $green;
       color: #fff;
+      text-align: center;
+      display: flex; /* Flexbox を適用 */
+      flex-direction: column; /* 垂直方向にアイテムを配置 */
+      align-items: center; /* 垂直方向に中央寄せ */
+      justify-content: center; /* 水平方向に中央寄せ */
+      padding: 0;
     
   }
 }
 
 
-.page-price__table-col::before {
+.page-price__title::before {
   content: "";
   background-image: url("../images/common/price-icon.svg");
   background-size: contain;
@@ -51,18 +73,24 @@
   height: rem(24);
   margin-bottom: rem(-5);
   margin-right: rem(8);
-  // margin-inline: auto;
+  @include mq(md) {
+      display: none;
+  }
 }
 
-.page-price__table-row::after {
-  content: "";
-  background-image: url("../images/common/price-icon.svg");
-  background-size: contain;
-  display: block;
-  width: rem(64);
-  height: rem(64);
-  margin-inline: auto;
-  margin-top: rem(8);
+.page-price__title::after {
+  display: none;
+  @include mq(md) {
+    content: "";
+    background-image: url("../images/common/price-icon.svg");
+    background-size: contain;
+    display: block;
+    width: rem(64);
+    height: rem(64);
+    margin-inline: auto;
+    margin-top: rem(8);
+    align-self: center; /* アイコンを垂直方向に中央寄せ */
+  }     
 }
 
 .page-price__table-course {
@@ -88,7 +116,7 @@
   }
 }
 
-.page-price__table + .page-price__table {
+.page-price__content + .page-price__content {
   margin-top: rem(40);
   @include mq(md) {
       margin-top: rem(80);

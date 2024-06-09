@@ -1,9 +1,10 @@
 @use "global" as *;
 
 .sub-fv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
   height: rem(460);
   // background-image: url(../images/common/sub-fv-sp.jpg);
   background-repeat: no-repeat;
@@ -93,13 +94,14 @@
   color: $white;
   font-weight: $regular;
   font-family: $font-family-la;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @include mq(md) {
-      font-size: rem(80);
-      padding-top: rem(100);
+    top: 59%;
+    font-size: rem(80);
   }
 }
 
-// .sub-fv__title--contact {
-//   // letter-spacing: 0;
-// }
 

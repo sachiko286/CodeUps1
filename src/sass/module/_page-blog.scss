@@ -29,21 +29,22 @@
 
 .page-blog__aside--sub {
   @include mq(md) {
-      max-width: rem(380);
-      margin-top: rem(6);
+    max-width: rem(380);
+    margin-top: rem(6);
   }
 }
 
 .page-blog__aside-inner {
   padding: 0 rem(25);
   @include mq(md) {
-      padding: 0 0 0 rem(80);
+    padding: 0;
+    margin-left: rem(80);
   }
 }
 
 .page-blog__aside-inner--sub {
   @include mq(md) {
-      padding-left: rem(86);
+    margin-left: rem(86);
   }
 }
 

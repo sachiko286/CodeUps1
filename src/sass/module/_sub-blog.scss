@@ -41,36 +41,39 @@
   }
 }
 
-.sub-blog__text {
+.page-sub-blog__text {
   margin-top: rem(24);
   @include mq(md) {
       margin-top: rem(40);
   }
 }
 
-.sub-blog__list {
+.page-sub-blog__list {
   margin-top: rem(24);
   @include mq(md) {
       margin-top: rem(40);
   }
 }
 
-.sub-blog__list-item {
+.page-sub-blog__list-item {
   position: relative;
   padding-left: rem(27);
 }
 
-.sub-blog__list-item + .sub-blog__list-item {
+.page-sub-blog__list-item + .page-sub-blog__list-item {
   margin-top: rem(4);
 }
 
-.sub-blog__list-item::before {
+.page-sub-blog__list-item::before {
   content: "";
-  background-image: url("../images/common/_ヒトデグリーン.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  -webkit-mask-image: url("../images/common/_ヒトデ.svg") no-repeat center center / contain;
+  mask-image: url("../images/common/_ヒトデ.svg");
+  mask-repeat: no-repeat;
+  // mask-position: center center;
+  mask-size:  contain;
   width: rem(18);
   height: rem(18);
+  background-color: $green;
   position: absolute;
   top: rem(4);
   left: 0;
