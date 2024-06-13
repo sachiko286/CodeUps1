@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.aside-voice__card:hover {
+  opacity: 0.7;
+
+}
 .aside-voice__img {
   aspect-ratio: 294 / 218;
 }
