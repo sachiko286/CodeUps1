@@ -298,7 +298,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                 isValid = false;
             }
             if (!categoryFields.is(':checked')) {
-                setErrorStyle(categoryFields.closest('.form__radio'));
+                setErrorStyle(categoryFields.closest('.form__checkbox'));
                 isValid = false;
             }
             if (!messageField.val().trim()) {
@@ -324,13 +324,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             }
         
             function resetErrorStyles() {
-            $('.form__input.error, .form__textarea.error, .form__radio.error, .form__privacyCheck-wrapper.error').removeClass('error');
+            $('.form__input.error, .form__textarea.error, .form__checkbox.error, .form__privacyCheck-wrapper.error').removeClass('error');
             }
         });
                     
-    
-
-
     });
 });
 

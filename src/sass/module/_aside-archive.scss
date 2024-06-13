@@ -16,6 +16,7 @@
 }
 
 .aside-archive__item-mouth {
+  cursor: pointer;
   padding-left: rem(26);
 }
 
@@ -28,4 +29,9 @@
 
 .aside-archive__item:nth-of-type(2) {
   margin-top: rem(2);
+}
+
+.aside-archive__item-year:hover,
+.aside-archive__item-mouth:hover {
+  opacity: 0.7;
 }

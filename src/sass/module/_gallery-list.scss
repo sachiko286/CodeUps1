@@ -46,12 +46,9 @@
 
   @include mq(md) {
     margin-top: rem(80); 
-
-    grid-template-columns: calc(492 / 1080 * 100%) calc(80 / 1080 * 100%) calc(492 / 1080 * 100%); // 3つのカラム、中央のカラムを細く設定
+    grid-template-columns: calc(492 / 1080 * 100%) calc(80 / 1080 * 100%) calc(492 / 1080 * 100%); /*3つのカラム、中央のカラムを細く設定*/
     grid-auto-flow: dense; /* 隙間を埋めながら配置 */
     // grid-auto-rows: minmax(#{rem(369)}, 1fr); // 行の高さを相対値で設定
-
-
   }
 }
 
@@ -64,32 +61,40 @@
   .gallery-list__item:nth-child(6n+1) {
     grid-column: span 1; // 1番目のアイテムの位置を指定
     grid-row: span 2; // 1番目のアイテムの行を2つ分占める
-    aspect-ratio: 492/746;
+    // aspect-ratio: 492/746;
   }
   .gallery-list__item:nth-child(6n+2) {
     grid-column: span 2; // 2番目のアイテムの位置を指定
     grid-row: span 1; // 2番目のアイテムの行を1つ分占める
-    aspect-ratio: 580/369;
+    // aspect-ratio: 580/369;
   }
   .gallery-list__item:nth-child(6n+3) {
     grid-column: span 2; // 3番目のアイテムの位置を指定
     grid-row: span 1; // 3番目のアイテムの行を1つ分占める
-    aspect-ratio: 580/369;
+    // aspect-ratio: 580/369;
   }
   .gallery-list__item:nth-child(6n+4) {
     grid-column: span 2; // 4番目のアイテムの位置を指定
     grid-row: span 1; // 4番目のアイテムの行を1つ分占める
-    aspect-ratio: 580/369;
-    
+    // aspect-ratio: 580/369;
   }
   .gallery-list__item:nth-child(6n+5) {
     grid-column: span 2; // 5番目のアイテムの位置を指定
     grid-row: span 1; // 5番目のアイテムの行を1つ分占める
-    aspect-ratio: 580/369;
+    // aspect-ratio: 580/369;
   }
   .gallery-list__item:nth-child(6n+6) {
     grid-column: span 1; // 6番目のアイテムの位置を指定
     grid-row: span 2; // 6番目のアイテムの行を2つ分占める
+    // aspect-ratio: 492/746;
+  }
+
+  .gallery-list__item {
+    aspect-ratio: 580/369;
+  }
+  
+  .gallery-list__item:nth-child(6n+1),
+  .gallery-list__item:nth-child(6n+6) {
     aspect-ratio: 492/746;
   }
 }

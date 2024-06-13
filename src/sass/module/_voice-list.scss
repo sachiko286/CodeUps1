@@ -6,14 +6,10 @@
   gap: rem(40);
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.voice-list--page-voice {
-  @include mq(md) {
     row-gap: rem(80);
   }
 }
+
 
 
 

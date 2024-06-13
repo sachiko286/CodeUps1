@@ -71,7 +71,7 @@
   }
 }
 
-.form__radio {
+.form__checkbox {
   @include mq(md) {
     margin-top: rem(2);
   }
@@ -137,18 +137,18 @@
   outline: none;
 }
 
-.form__radio label {
+.form__checkbox label {
   display: block;
 }
 
-.form__radio label:not(:first-of-type) {
+.form__checkbox label:not(:first-of-type) {
   margin-top: rem(3);
   @include mq(md) {
     margin-top: rem(4);  
   }
 }
 
-.form__radio input {
+.form__checkbox input {
   /* display: none; */
   display: block;
   height: rem(14);
@@ -159,7 +159,7 @@
   margin: 0;
 }
 
-.form__radio input + span {
+.form__checkbox input + span {
   padding: 0 0 0 rem(22);
   position: relative;
   display: block;
@@ -170,7 +170,7 @@
 
 
 
-.form__radio input + span::before {
+.form__checkbox input + span::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -183,7 +183,7 @@
   height: rem(14);
 }
 
-.form__radio input + span::after {
+.form__checkbox input + span::after {
   content: "";
   margin-top: -0.125rem;
   position: absolute;
@@ -200,7 +200,7 @@
 }
 
 
-.form__radio input:checked + span::after {
+.form__checkbox input:checked + span::after {
   opacity: 1;
 }
 
@@ -269,8 +269,8 @@
   display: block;
   width: rem(12);
   height: rem(8);
-  border-bottom: 2px solid #000;
-  border-left: 2px solid #000;
+  border-bottom: 2px solid #C94800;
+  border-left: 2px solid #C94800;
   transition: 0.3s;
   opacity: 0;
 }
@@ -300,7 +300,7 @@
 
 .form__input.error input,
 .form__textarea.error textarea,
-.form__radio.error input {
+.form__checkbox.error input {
   border: 1px solid #C94800;
   background-color: rgb(201, 72, 0, 20%); /* ピンクの塗りつぶし */
 }
@@ -311,7 +311,7 @@
   color: #fff;
 }
 
-.form__radio.error input + span::before,
+.form__checkbox.error input + span::before,
 .form__privacyCheck-wrapper.error input + span::before {
   border: 1px solid #C94800;
   background-color: rgb(201, 72, 0, 20%); /* ピンクの塗りつぶし */
