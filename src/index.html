@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- 自動的に電話番号と認識してリンク化する機能を無効 -->
   <meta name="format-detection" content="telephone=no" />
+  <!-- ポートフォリオや学習の時 検索結果に出ないように設定 -->
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
   <title>CodeUps</title>
+  <!-- ウェブページの概要や説明。検索結果に表示されることがある -->
   <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="ウェブページの内容に関連するキーワード" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="共有された際のページのタイトル" />
+  <meta property="og:type" content="ページの種類 例:website、article、videoなど">
+  <meta property="og:url" content="ページのURLを指定" />
+  <meta property="og:image" content="ページを共有した際に表示される画像のURL" />
+  <meta property="og:site_name" content="サイトの名前" />
+  <meta property="og:description" content="ページの説明" />
   <!-- ファビコン -->
   <link rel="icon" href="#" />
-  <!-- css -->
+  <!-- swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +42,7 @@
 </head>
 
 <body>
+  <!-- ヘッダー -->
   <header class="header top-header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -45,11 +50,15 @@
           <img src="./assets/images/common/CodeUps-w.svg" alt="ロゴ">
         </a>
       </h1>
-      <button class="header__hamburger js-hamburger">
+
+      <!-- ハンバーガーボタン -->
+      <button class="header__hamburger js-hamburger" aria-label="メニューを開く">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
+      <!-- PCヘッダーナビ -->
       <nav class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
@@ -79,6 +88,7 @@
         </ul>
       </nav>
 
+      <!-- spドロワーメニュー -->
       <div class="header__drawer js-drawer">
         <nav class="header__drawer-nav sp-nav">
           <div class="sp-nav__list-box">
