@@ -274,6 +274,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             var categoryFields = $('input[name="category"]');
             var messageField = $('textarea[name="message"]');
             var privacyCheck = $('#privacyCheck');
+
+            // console.log('name:', nameField.val());
+            // console.log('mail:', mailField.val());
+            // console.log('phone:', phoneField.val());
+            // console.log('category:', categoryFields.length);
+            // console.log('message:', messageField.val());
+            // console.log('privacyCheck:', privacyCheck.length);  // 要素の存在確認
         
             // エラーメッセージを非表示にする
             var errorElement = $('.form__error');

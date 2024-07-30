@@ -57,6 +57,15 @@
   transform: scale(1, 1);
 }
 
+.button.slide input {
+  color: #fff;
+}
+
+.button.slide:hover input{
+  color: $green;
+}
+
+
 
 // 矢印
 .button__arrow {
