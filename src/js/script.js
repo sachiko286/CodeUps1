@@ -272,7 +272,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             var mailField = $('#mail');
             var phoneField = $('#phone');
             var categoryFields = $('input[name="category"]');
-            var messageField = $('textarea[name="message"]');
+            var messageField = $('#message');
             var privacyCheck = $('#privacyCheck');
 
             // console.log('name:', nameField.val());
