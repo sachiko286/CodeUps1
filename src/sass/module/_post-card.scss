@@ -13,8 +13,7 @@
 
 .post-card__img {
   aspect-ratio: 121 / 90;
-  width: 46.0077%;
-}
+  width: calc(121 / 246* 100%);}
 
 .post-card__img img {
   object-fit: cover;
@@ -25,6 +24,7 @@
 
 .post-card__content {
   margin-left: rem(16);
+  width: calc(100% - (121 / 246* 100%));
 
 }
 
